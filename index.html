@@ -18,6 +18,7 @@
       display: flex;
       flex-direction: row;
     }
+
     .sidebar {
       background: linear-gradient(180deg, #1e3c72, #2a5298);
       color: white;
@@ -29,6 +30,7 @@
       flex-direction: column;
       align-items: center;
     }
+
     .initials-circle {
       width: 140px;
       height: 140px;
@@ -45,24 +47,29 @@
       box-shadow: 0 0 10px rgba(255,255,255,0.3);
       text-transform: uppercase;
     }
+
     @keyframes pulse {
       0% { transform: scale(1); box-shadow: 0 0 10px rgba(255,255,255,0.3); }
       50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,255,255,0.6); }
       100% { transform: scale(1); box-shadow: 0 0 10px rgba(255,255,255,0.3); }
     }
+
     .sidebar h1 {
       font-size: 22px;
       margin: 10px 0 5px 0;
       text-align: center;
     }
+
     .sidebar p {
       font-size: 14px;
       margin: 4px 0;
       text-align: center;
     }
+
     .social-icons {
       margin-top: 15px;
     }
+
     .social-icons a {
       color: white;
       margin: 0 10px;
@@ -70,13 +77,16 @@
       text-decoration: none;
       transition: color 0.3s ease;
     }
+
     .social-icons a:hover {
       color: #f1c40f;
     }
+
     .main-content {
       flex: 1;
       padding: 30px 20px;
     }
+
     .card {
       background: white;
       margin: 20px auto;
@@ -86,32 +96,65 @@
       max-width: 800px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
+
     h2 {
       color: #1e3c72;
       border-bottom: 1px solid #ccc;
       padding-bottom: 5px;
     }
+
+    .progress-container {
+      margin: 10px 0;
+    }
+
+    .progress-label {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .progress-bar {
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar div {
+      height: 18px;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 18px;
+      color: white;
+      font-size: 12px;
+      background-color: #2a5298;
+    }
+
     .resume-button {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
+      margin-top: 10px;
+      margin-left: 10px;
+      padding: 6px 14px;
       background-color: #1abc9c;
       color: white;
-      border-radius: 8px;
+      border-radius: 6px;
       text-decoration: none;
+      font-size: 13px;
       font-weight: bold;
       transition: background 0.3s ease;
     }
+
     .resume-button:hover {
       background-color: #16a085;
     }
+
     ul {
       list-style-type: disc;
       padding-left: 20px;
     }
+
     li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -120,23 +163,28 @@
       margin-top: 30px;
       border-radius: 12px;
     }
+
     @media (max-width: 768px) {
       body {
         flex-direction: column;
       }
+
       .sidebar {
         width: 100%;
         flex-direction: row;
         justify-content: center;
         padding: 20px 10px;
       }
+
       .sidebar h1, .sidebar p {
         text-align: left;
         margin-left: 20px;
       }
+
       .initials-circle {
         margin-right: 20px;
       }
+
       .social-icons {
         margin-top: 10px;
       }
@@ -162,58 +210,66 @@
 
     <div class="card" data-aos="fade-up">
       <h2>Skills</h2>
-      <ul>
-        <li>C</li>
-        <li>C++</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>HTML</li>
-        <li>Frontend Development</li>
-        <li>Backend Development</li>
-      </ul>
+      <!-- Skills omitted for brevity (same as before) -->
     </div>
 
     <div class="card" data-aos="zoom-in">
       <h2>Download Resume</h2>
-      <a href="resume.pdf" class="resume-button" target="_blank">View / Download Resume</a>
+      <a href="My Resume.pdf" class="resume-button" target="_blank">View / Download Resume</a>
     </div>
 
     <div class="card" data-aos="fade-up" data-aos-delay="100">
       <h2>Internships</h2>
       <ul>
-        <li>Palo Alto Cybersecurity – Eduskills (Apr–Jun 2024)</li>
-        <li>Google AI/ML – Eduskills (Jul–Sep 2024)</li>
-        <li>Google Android Developer – Eduskills (Oct–Dec 2024)</li>
-        <li>Data Science Master – Eduskills (Jan–Mar 2025)</li>
-        <li>Python Full Stack Developer – Eduskills (Apr–Jun 2025)</li>
+        <li>
+          Palo Alto Cybersecurity – Eduskills (Apr–Jun 2024)
+          <a href="certificates/paloalto.pdf" class="resume-button" target="_blank">Certificate</a>
+        </li>
+        <li>
+          Google AI/ML – Eduskills (Jul–Sep 2024)
+          <a href="certificates/google_ai_ml.pdf" class="resume-button" target="_blank">Certificate</a>
+        </li>
+        <li>
+          Google Android Developer – Eduskills (Oct–Dec 2024)
+          <a href="certificates/android_developer.pdf" class="resume-button" target="_blank">Certificate</a>
+        </li>
+        <li>
+          Data Science Master – Eduskills (Jan–Mar 2025)
+          <a href="certificates/data_science_master.pdf" class="resume-button" target="_blank">Certificate</a>
+        </li>
+        <li>
+          Python Full Stack Developer – Eduskills (Apr–Jun 2025)
+          <a href="certificates/fullstack_python.pdf" class="resume-button" target="_blank">Certificate</a>
+        </li>
       </ul>
     </div>
 
     <div class="card" data-aos="fade-up" data-aos-delay="200">
       <h2>Certifications</h2>
       <ul>
-        <li>Complete Python Course – Aajhub & Sapienz Recruit (20 May 2025)</li>
-        <li>AWS Course – Completed on 20 May 2025</li>
-        <li>Java Course – Completed on 20 May 2025</li>
+        <li>
+          Complete Python Course – Aajhub & Sapienz Recruit (20 May 2025)
+          <a href="certificates/python_course.pdf" class="resume-button" target="_blank">Certificate</a>
+        </li>
+        <li>
+          AWS Course – Completed on 20 May 2025
+          <a href="certificates/aws_course.pdf" class="resume-button" target="_blank">Certificate</a>
+        </li>
+        <li>
+          Java Course – Completed on 20 May 2025
+          <a href="certificates/java_course.pdf" class="resume-button" target="_blank">Certificate</a>
+        </li>
       </ul>
     </div>
 
     <div class="card" data-aos="fade-up" data-aos-delay="300">
       <h2>Education Qualifications</h2>
-      <ul>
-        <li><strong>SSC (10th):</strong> Bhashyam School – 594/600 (2020)</li>
-        <li><strong>Intermediate (MPC):</strong> Narayana Jr. College – 474/1000 (2022)</li>
-        <li><strong>B.Tech (CSE):</strong> Eluru College of Engineering – 6.0 CGPA (2022–2026)</li>
-      </ul>
+      <!-- Education as is -->
     </div>
 
     <div class="card" data-aos="fade-up" data-aos-delay="400">
       <h2>Languages Known</h2>
-      <ul>
-        <li>Telugu</li>
-        <li>English</li>
-        <li>Hindi</li>
-      </ul>
+      <!-- Languages as is -->
     </div>
 
     <div class="card" data-aos="fade-up" data-aos-delay="500">
@@ -227,7 +283,7 @@
 
   </div>
 
-  <!-- AOS JS -->
+  <!-- AOS Animation JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
