@@ -4,23 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sai Mani Varma - Portfolio</title>
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <!-- AOS Animation CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
+    :root {
+      --bg-color: #eaeff1;
+      --text-color: #2c3e50;
+      --card-bg: white;
+      --sidebar-bg: linear-gradient(180deg, #1e3c72, #2a5298);
+      --primary: #1abc9c;
+      --hover: #16a085;
+    }
+    body.dark-mode {
+      --bg-color: #1e1e1e;
+      --text-color: #f1f1f1;
+      --card-bg: #2c2c2c;
+      --sidebar-bg: linear-gradient(180deg, #000000, #2a2a2a);
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #eaeff1;
+      background: var(--bg-color);
+      color: var(--text-color);
       margin: 0;
       padding: 0;
-      color: #2c3e50;
       display: flex;
       flex-direction: row;
+      overflow-x: hidden;
+      transition: all 0.3s ease;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      z-index: 999;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle, #e0f7fa 5%, transparent 20%) repeat;
+      background-size: 80px 80px;
+      animation: moveBackground 20s linear infinite;
+      z-index: -1;
+      opacity: 0.3;
+    }
+    @keyframes moveBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
     }
 
     .sidebar {
-      background: linear-gradient(180deg, #1e3c72, #2a5298);
+      background: var(--sidebar-bg);
       color: white;
       width: 260px;
       min-height: 100vh;
@@ -29,8 +71,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: fixed;
+      left: 0;
+      top: 0;
+      animation: slideInLeft 1s ease;
+      z-index: 1;
     }
-
     .initials-circle {
       width: 140px;
       height: 140px;
@@ -47,93 +93,78 @@
       box-shadow: 0 0 10px rgba(255,255,255,0.3);
       text-transform: uppercase;
     }
-
+    .typewriter {
+      overflow: hidden;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+      width: 0;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 230px }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
     @keyframes pulse {
       0% { transform: scale(1); box-shadow: 0 0 10px rgba(255,255,255,0.3); }
       50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,255,255,0.6); }
       100% { transform: scale(1); box-shadow: 0 0 10px rgba(255,255,255,0.3); }
     }
-
-    .sidebar h1 {
-      font-size: 22px;
-      margin: 10px 0 5px 0;
-      text-align: center;
+    @keyframes slideInLeft {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
-
-    .sidebar p {
-      font-size: 14px;
-      margin: 4px 0;
-      text-align: center;
+    .nav-links {
+      margin-top: 30px;
     }
-
-    .social-icons {
-      margin-top: 15px;
-    }
-
-    .social-icons a {
+    .nav-links a {
       color: white;
-      margin: 0 10px;
-      font-size: 18px;
       text-decoration: none;
+      display: block;
+      margin: 10px 0;
       transition: color 0.3s ease;
     }
-
-    .social-icons a:hover {
-      color: #f1c40f;
+    .nav-links a:hover {
+      color: var(--primary);
     }
 
     .main-content {
+      margin-left: 260px;
       flex: 1;
       padding: 30px 20px;
+      animation: fadeIn 1s ease;
+      scroll-behavior: smooth;
     }
-
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
     .card {
-      background: white;
+      background: var(--card-bg);
       margin: 20px auto;
       padding: 20px;
       border-radius: 12px;
       width: 90%;
       max-width: 800px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
     }
-
+    .card:hover {
+      transform: translateY(-5px);
+    }
     h2 {
       color: #1e3c72;
       border-bottom: 1px solid #ccc;
       padding-bottom: 5px;
     }
-
-    .progress-container {
-      margin: 10px 0;
-    }
-
-    .progress-label {
-      font-weight: bold;
-      margin-bottom: 4px;
-    }
-
-    .progress-bar {
-      background-color: #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .progress-bar div {
-      height: 18px;
-      text-align: right;
-      padding-right: 10px;
-      line-height: 18px;
-      color: white;
-      font-size: 12px;
-      background-color: #2a5298;
-    }
-
     .resume-button {
       display: inline-block;
       margin-top: 10px;
       margin-left: 10px;
       padding: 6px 14px;
-      background-color: #1abc9c;
+      background-color: var(--primary);
       color: white;
       border-radius: 6px;
       text-decoration: none;
@@ -141,20 +172,9 @@
       font-weight: bold;
       transition: background 0.3s ease;
     }
-
     .resume-button:hover {
-      background-color: #16a085;
+      background-color: var(--hover);
     }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 12px;
-    }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -162,41 +182,41 @@
       color: white;
       margin-top: 30px;
       border-radius: 12px;
+      animation: fadeIn 1s ease;
     }
-
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-        padding: 20px 10px;
-      }
-
-      .sidebar h1, .sidebar p {
-        text-align: left;
-        margin-left: 20px;
-      }
-
-      .initials-circle {
-        margin-right: 20px;
-      }
-
-      .social-icons {
-        margin-top: 10px;
-      }
+    .footer-c-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: white;
+      color: #1e3c72;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      margin-right: 8px;
+      animation: pulse 2s infinite;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 18px;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: var(--primary);
     }
   </style>
 </head>
 <body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
-  <div class="sidebar" data-aos="fade-right">
+  <div class="sidebar">
     <div class="initials-circle">SMV</div>
     <h1>Jujjuvarapu Sai Mani Varma</h1>
-    <p>Software Engineer</p>
+    <p class="typewriter">Software Engineer</p>
     <p>Email: manivarma701@gmail.com</p>
     <p>Phone: 7989591779</p>
     <div class="social-icons">
@@ -204,90 +224,69 @@
       <a href="https://github.com/manivarma701-jpg" target="_blank"><i class="fab fa-github"></i></a>
       <a href="mailto:manivarma701@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
+    <div class="nav-links">
+      <a href="#about">👤 About Me</a>
+      <a href="#resume">📄 Resume</a>
+      <a href="#internships">💼 Internships</a>
+      <a href="#certifications">📜 Certifications</a>
+      <a href="#footer">🔗 Footer</a>
+    </div>
   </div>
 
   <div class="main-content">
-
-    <div class="card" data-aos="fade-up">
-      <h2>Skills</h2>
-      <!-- Skills omitted for brevity (same as before) -->
+    <div id="about" class="card" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm Sai Mani Varma, a passionate and results-driven Software Engineer. I have a keen interest in full-stack web development, data science, and cloud computing. I enjoy turning complex problems into simple, beautiful, and intuitive designs. With a solid foundation in Python, Java, and cloud platforms like AWS, I'm constantly learning and growing to stay ahead in the tech world.
+      </p>
     </div>
 
-    <div class="card" data-aos="zoom-in">
+    <div id="resume" class="card" data-aos="zoom-in">
       <h2>Download Resume</h2>
       <a href="My Resume.pdf" class="resume-button" target="_blank">View / Download Resume</a>
     </div>
 
-    <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <div id="internships" class="card" data-aos="fade-up" data-aos-delay="100">
       <h2>Internships</h2>
       <ul>
-        <li>
-          Palo Alto Cybersecurity – Eduskills (Apr–Jun 2024)
-          <a href="certificates/paloalto.pdf" class="resume-button" target="_blank">Certificate</a>
-        </li>
-        <li>
-          Google AI/ML – Eduskills (Jul–Sep 2024)
-          <a href="certificates/google_ai_ml.pdf" class="resume-button" target="_blank">Certificate</a>
-        </li>
-        <li>
-          Google Android Developer – Eduskills (Oct–Dec 2024)
-          <a href="certificates/android_developer.pdf" class="resume-button" target="_blank">Certificate</a>
-        </li>
-        <li>
-          Data Science Master – Eduskills (Jan–Mar 2025)
-          <a href="certificates/data_science_master.pdf" class="resume-button" target="_blank">Certificate</a>
-        </li>
-        <li>
-          Python Full Stack Developer – Eduskills (Apr–Jun 2025)
-          <a href="certificates/fullstack_python.pdf" class="resume-button" target="_blank">Certificate</a>
-        </li>
+        <li>Palo Alto Cybersecurity – Eduskills (Apr–Jun 2024)</li>
+        <li>Google AI/ML – Eduskills (Jul–Sep 2024)</li>
+        <li>Data Science Master – Eduskills (Jan–Mar 2025)</li>
+        <li>Python Full Stack Developer – Eduskills (Apr–Jun 2025)</li>
       </ul>
     </div>
 
-    <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <div id="certifications" class="card" data-aos="fade-up" data-aos-delay="200">
       <h2>Certifications</h2>
       <ul>
-        <li>
-          Complete Python Course – Aajhub & Sapienz Recruit (20 May 2025)
-          <a href="certificates/python_course.pdf" class="resume-button" target="_blank">Certificate</a>
-        </li>
-        <li>
-          AWS Course – Completed on 20 May 2025
-          <a href="certificates/aws_course.pdf" class="resume-button" target="_blank">Certificate</a>
-        </li>
-        <li>
-          Java Course – Completed on 20 May 2025
-          <a href="certificates/java_course.pdf" class="resume-button" target="_blank">Certificate</a>
-        </li>
+        <li>Complete Python Course – Aajhub & Sapienz Recruit (20 May 2025)</li>
+        <li>AWS Course – Completed on 20 May 2025</li>
+        <li>Java Course – Completed on 20 May 2025</li>
       </ul>
     </div>
 
-    <div class="card" data-aos="fade-up" data-aos-delay="300">
-      <h2>Education Qualifications</h2>
-      <!-- Education as is -->
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="400">
-      <h2>Languages Known</h2>
-      <!-- Languages as is -->
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="500">
-      <h2>Address</h2>
-      <p>22d-9-5, 6th road, Ramakrishnapuram</p>
-    </div>
-
-    <footer data-aos="fade-up" data-aos-delay="600">
-      <p>© 2025 Jujjuvarapu Sai Mani Varma</p>
+    <footer id="footer" data-aos="fade-up" data-aos-delay="400">
+      <p>
+        <span style="display: inline-flex; align-items: center;">
+          <span class="footer-c-circle">C</span>
+          2025 Sai Mani Varma
+        </span>
+      </p>
     </footer>
-
   </div>
 
-  <!-- AOS Animation JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+    window.onload = () => {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    }
   </script>
-
 </body>
 </html>
