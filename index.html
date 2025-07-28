@@ -2,165 +2,185 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JUJJUVARAPU SAI MANI VARMA - Portfolio</title>
-
-  <!-- Font Awesome for Social Icons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jujjuvarapu Sai Mani Varma | Portfolio</title>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f0f5;
+    /* Global Styles */
+    * {
       margin: 0;
       padding: 0;
-      color: #333;
+      box-sizing: border-box;
       scroll-behavior: smooth;
     }
-
-    header {
-      background: #0077b6;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      animation: fadeInDown 1s ease-in-out;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+      padding-bottom: 60px;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+    body.dark {
+      background: #111;
+      color: #f0f0f0;
     }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
+    h1, h2 {
+      margin-bottom: 10px;
     }
-
-    section {
-      padding: 20px;
-      background: white;
-      margin: 20px;
-      border-radius: 10px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.05);
-      opacity: 0;
-      animation: fadeInUp 1s ease-in-out forwards;
-    }
-
-    section:nth-of-type(2) { animation-delay: 0.2s; }
-    section:nth-of-type(3) { animation-delay: 0.4s; }
-    section:nth-of-type(4) { animation-delay: 0.6s; }
-    section:nth-of-type(5) { animation-delay: 0.8s; }
-    section:nth-of-type(6) { animation-delay: 1s; }
-    section:nth-of-type(7) { animation-delay: 1.2s; }
-
-    h2 {
-      color: #0077b6;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .contact a {
-      color: #0077b6;
+    a {
       text-decoration: none;
-      transition: color 0.3s ease;
+      color: inherit;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .contact a:hover {
-      color: #023e8a;
-      text-decoration: underline;
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px;
+    }
+    .btn {
+      background: #fff;
+      color: #2575fc;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #2575fc;
+      color: white;
     }
 
-    .social-icons {
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    /* Skills & Lists */
+    .skills ul, .internships ul, .education ul, .certifications ul, .projects ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skills li, .internships li, .education li, .certifications li, .projects li {
+      background: #e0e0e0;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    body.dark .skills li,
+    body.dark .internships li,
+    body.dark .education li,
+    body.dark .certifications li,
+    body.dark .projects li {
+      background: #333;
+    }
+
+    /* Contact Section */
+    .contact a {
+      color: #0077b5;
+    }
+    .social {
       margin-top: 15px;
     }
-
-    .social-icons a {
-      text-decoration: none;
-      color: #0077b6;
-      margin: 0 10px;
-      font-size: 1.5em;
-      transition: transform 0.3s ease, color 0.3s ease;
+    .social a {
+      font-size: 24px;
+      margin-right: 15px;
+      transition: color 0.3s;
+    }
+    .social a:hover {
+      color: #6a11cb;
     }
 
-    .social-icons a:hover {
-      transform: scale(1.2);
-      color: #023e8a;
-    }
-
+    /* Footer */
     footer {
       text-align: center;
-      padding: 15px;
-      background: #0077b6;
-      color: white;
-      font-size: 0.9em;
-      animation: fadeInUp 1.5s ease-in-out;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #777;
     }
 
-    @keyframes fadeInUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes fadeInDown {
-      from { transform: translateY(-40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
+    /* Responsive Design */
     @media (max-width: 768px) {
-      header h1 { font-size: 1.8em; }
-      section { margin: 10px; padding: 15px; }
-      .social-icons a { font-size: 1.2em; margin: 0 8px; }
-      ul { padding-left: 15px; }
-      .contact p { font-size: 0.95em; }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .skills ul, .internships ul, .education ul, .certifications ul, .projects ul {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-
-  <header>
+  <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+  <header class="hero">
     <h1>JUJJUVARAPU SAI MANI VARMA</h1>
     <p>Aspiring Software Engineer</p>
+    <a href="Sai_Mani_Varma_Resume.pdf" class="btn" download>📄 Download Resume</a>
   </header>
 
-  <section>
+  <section class="about">
     <h2>About Me</h2>
-    <p>I am an aspiring software engineer seeking to apply and grow my skills in software development and problem solving in a dynamic and challenging environment.</p>
+    <p>I’m a passionate developer eager to apply and grow my skills in software development, full-stack engineering, AI/ML, and cloud computing.</p>
   </section>
 
-  <section>
-    <h2>Technical Skills</h2>
+  <section class="skills">
+    <h2>Skills</h2>
     <ul>
-      <li><strong>Languages:</strong> C, C++, Java, Python</li>
-      <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
-      <li><strong>Full Stack:</strong> Basics of frontend & backend</li>
-      <li><strong>Cloud:</strong> AWS (Basic knowledge)</li>
-      <li><strong>AI/ML:</strong> Basics from internship exposure</li>
+      <li>C</li><li>C++</li><li>Java</li><li>Python</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>AWS</li><li>AI/ML</li>
     </ul>
   </section>
 
-  <section>
+  <section class="internships">
     <h2>Internships</h2>
     <ul>
-      <li>Palo Alto Cybersecurity – Eduskills (Apr – Jun 2024)</li>
-      <li>Google AI/ML – Eduskills (Jul – Sep 2024)</li>
-      <li>Google Android Developer – Eduskills (Oct – Dec 2024)</li>
-      <li>Data Science Master – Eduskills (Jan – Mar 2025)</li>
-      <li>Python Full Stack Developer – Eduskills (Apr – Jun 2025)</li>
+      <li>Palo Alto Cybersecurity – Eduskills (Apr–Jun 2024)</li>
+      <li>Google AI/ML – Eduskills (Jul–Sep 2024)</li>
+      <li>Google Android Developer – Eduskills (Oct–Dec 2024)</li>
+      <li>Data Science Master – Eduskills (Jan–Mar 2025)</li>
+      <li>Python Full Stack Developer – Eduskills (Apr–Jun 2025)</li>
     </ul>
   </section>
 
-  <section>
+  <section class="education">
     <h2>Education</h2>
     <ul>
-      <li><strong>B.Tech (CSE)</strong> – Eluru College of Engineering (2022–2026) | CGPA: 6.0</li>
-      <li><strong>Intermediate (MPC)</strong> – Narayana Jr. College (2020–2022) | 474 / 1000</li>
-      <li><strong>SSC</strong> – Bhashyam School (2019–2020) | 594 / 600</li>
+      <li>B.Tech (CSE), Eluru College of Engineering (2022–2026) – CGPA: 6.0</li>
+      <li>Intermediate (MPC), Narayana Jr. College (2020–2022) – 474/1000</li>
+      <li>SSC, Bhashyam School (2019–2020) – 594/600</li>
     </ul>
   </section>
 
-  <section>
+  <section class="certifications">
     <h2>Certifications</h2>
     <ul>
       <li>Complete Python Course – Aajhub & Sapienz Recruit (May 2025)</li>
@@ -169,27 +189,33 @@
     </ul>
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:manivarma701@gmail.com">manivarma701@gmail.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:+917989591779">7989591779</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank">linkedin.com/in/jujjuvarapu-sai-mani-varma</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/manivarma701-jpg" target="_blank">github.com/manivarma701-jpg</a></p>
-    <p><strong>Address:</strong> 22d-9-5, 6th Road, Ramakrishnapuram</p>
-    <p><strong>Languages Known:</strong> Telugu (Native), English (Fluent), Hindi (Basic)</p>
-    <p><strong>Resume:</strong> <a href="Sai_Mani_Varma_Resume.pdf" download>Download My Resume</a></p>
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Professional Portfolio Website (This site!)</li>
+      <li>App Lock with Pattern & Biometric Security (Python + Android)</li>
+      <li>AI/ML Mini Projects with Eduskills</li>
+    </ul>
+  </section>
 
-    <div class="social-icons">
-      <a href="mailto:manivarma701@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+917989591779"><i class="fas fa-phone"></i></a>
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p><strong>Email:</strong> <a href="mailto:manivarma701@gmail.com">manivarma701@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+917989591779">+91 79895 91779</a></p>
+    <div class="social">
       <a href="https://linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/manivarma701-jpg" target="_blank"><i class="fab fa-github"></i></a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 JUJJUVARAPU SAI MANI VARMA</p>
+    <p>© 2025 Jujjuvarapu Sai Mani Varma. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
 </body>
 </html>
