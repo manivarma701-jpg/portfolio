@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jujjuvarapu Sai Mani Varma | Portfolio</title>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Global Styles */
     * {
       margin: 0;
       padding: 0;
@@ -17,58 +16,55 @@
       font-family: 'Segoe UI', sans-serif;
       background: #f5f5f5;
       color: #333;
+      transition: background 0.4s ease, color 0.4s ease;
       line-height: 1.6;
-      transition: background 0.3s, color 0.3s;
-      padding-bottom: 60px;
     }
     body.dark {
-      background: #111;
+      background: #121212;
       color: #f0f0f0;
     }
     h1, h2 {
       margin-bottom: 10px;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
     section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       max-width: 900px;
       margin: auto;
-      animation: fadeIn 1s ease;
+      animation: fadeInUp 1s ease;
     }
-    @keyframes fadeIn {
+    @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Hero Section */
+    /* Header */
     .hero {
       background: linear-gradient(to right, #6a11cb, #2575fc);
       color: white;
       text-align: center;
       padding: 80px 20px;
+      animation: slideInDown 1s ease;
+    }
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
     .hero p {
-      font-size: 1.2rem;
-      margin: 10px 0 20px;
+      font-size: 1.3rem;
+      margin-top: 10px;
     }
     .btn {
       background: #fff;
       color: #2575fc;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 30px;
+      margin-top: 20px;
       display: inline-block;
-      transition: 0.3s;
+      font-weight: bold;
+      transition: all 0.3s ease;
     }
     .btn:hover {
       background: #2575fc;
@@ -82,39 +78,37 @@
       right: 20px;
       font-size: 24px;
       cursor: pointer;
-      z-index: 999;
+      z-index: 1000;
+      color: #333;
+    }
+    body.dark .theme-toggle {
+      color: #fff;
     }
 
-    /* Skills & Lists */
-    .skills ul, .internships ul, .education ul, .certifications ul, .projects ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    ul {
+      list-style: none;
+      padding-left: 0;
     }
-    .skills li, .internships li, .education li, .certifications li, .projects li {
-      background: #e0e0e0;
+    ul li {
+      background: #e6e6e6;
       padding: 10px 15px;
-      border-radius: 5px;
-      transition: 0.3s;
+      margin: 6px 0;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
-    body.dark .skills li,
-    body.dark .internships li,
-    body.dark .education li,
-    body.dark .certifications li,
-    body.dark .projects li {
+    body.dark ul li {
       background: #333;
     }
 
-    /* Contact Section */
+    /* Contact */
     .contact a {
       color: #0077b5;
-    }
-    .social {
-      margin-top: 15px;
+      display: inline-block;
     }
     .social a {
-      font-size: 24px;
+      font-size: 1.8rem;
       margin-right: 15px;
+      color: inherit;
       transition: color 0.3s;
     }
     .social a:hover {
@@ -124,24 +118,20 @@
     /* Footer */
     footer {
       text-align: center;
-      margin-top: 50px;
-      font-size: 0.9rem;
+      padding: 20px;
       color: #777;
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 1.8rem;
-      }
-      .skills ul, .internships ul, .education ul, .certifications ul, .projects ul {
-        flex-direction: column;
+        font-size: 2rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+
   <header class="hero">
     <h1>JUJJUVARAPU SAI MANI VARMA</h1>
     <p>Aspiring Software Engineer</p>
