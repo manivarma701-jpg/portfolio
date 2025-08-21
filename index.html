@@ -4,207 +4,164 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jujjuvarapu Sai Mani Varma | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #f5f5f5;
-      color: #333;
-      transition: background 0.4s ease, color 0.4s ease;
+      color: #232323;
       line-height: 1.6;
+      margin: 0;
+      transition: background .3s, color .3s;
     }
     body.dark {
-      background: #121212;
+      background: #14181e;
       color: #f0f0f0;
     }
-    h1, h2 {
-      margin-bottom: 10px;
-    }
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-      animation: fadeInUp 1s ease;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Header */
-    .hero {
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-      animation: slideInDown 1s ease;
-    }
-    @keyframes slideInDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      margin-top: 10px;
-    }
-    .btn {
-      background: #fff;
-      color: #2575fc;
-      padding: 10px 25px;
-      border-radius: 30px;
-      margin-top: 20px;
-      display: inline-block;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      background: #2575fc;
-      color: white;
-    }
-
-    /* Theme Toggle */
     .theme-toggle {
       position: fixed;
-      top: 15px;
-      right: 20px;
+      top: 18px; right: 23px;
       font-size: 24px;
       cursor: pointer;
-      z-index: 1000;
-      color: #333;
+      z-index: 9;
     }
-    body.dark .theme-toggle {
-      color: #fff;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      background: #e6e6e6;
-      padding: 10px 15px;
-      margin: 6px 0;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    body.dark ul li {
-      background: #333;
-    }
-
-    /* Contact */
-    .contact a {
-      color: #0077b5;
-      display: inline-block;
-    }
-    .social a {
-      font-size: 1.8rem;
-      margin-right: 15px;
-      color: inherit;
-      transition: color 0.3s;
-    }
-    .social a:hover {
-      color: #6a11cb;
-    }
-
-    /* Footer */
-    footer {
+    header {
+      background: linear-gradient(90deg,#3c3b6e,#289cf9);
+      color: white;
       text-align: center;
-      padding: 20px;
-      color: #777;
+      padding: 70px 14px 40px 14px;
     }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
+    header h1 { font-size: 2.3rem; }
+    header p { font-size: 1.1rem; }
+    .btn {
+      background: white; color: #2575fc;
+      padding: 10px 26px; border-radius: 30px;
+      margin-top: 17px; font-weight: bold; letter-spacing: .02em;
+      text-decoration: none; display: inline-block;
+      border: none;
+      transition: background .3s, color .3s;
+    }
+    .btn:hover { background: #2575fc; color: white; }
+    section {
+      background: white; 
+      max-width: 850px; margin:32px auto; 
+      border-radius: 13px; box-shadow: 0 5px 20px #0001;
+      padding: 42px 22px 32px 22px;
+    }
+    h2 { color: #2575fc; margin:0 0 16px 0 }
+    ul { padding: 0; }
+    ul li {
+      background: #eaf2fb; color: #232323;
+      padding: 7px 14px; margin: 7px 0;
+      border-radius: 6px; 
+    }
+    body.dark section { background: #232323; box-shadow: none;}
+    body.dark ul li { background: #181818; color: #f2f2f2;}
+    .social a {
+      margin-right: 19px;
+      font-size: 1.55rem;
+      color: #275fcc; 
+      transition:color .3s;
+      text-decoration: none;
+    }
+    .social a:hover { color: #6a11cb;}
+    .contact-list strong { display:inline-block; width:68px;}
+    footer {
+      text-align: center; 
+      padding: 20px;
+      background:none; 
+      color: #8a8a8a;
+    }
+    @media (max-width:600px) {
+      header { padding:40px 7px 22px 7px }
+      section { padding: 24px 8px 12px 8px }
     }
   </style>
 </head>
 <body>
   <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
-
-  <header class="hero">
-    <h1>JUJJUVARAPU SAI MANI VARMA</h1>
-    <p>Aspiring Software Engineer</p>
+  <header>
+    <h1>Jujjuvarapu Sai Mani Varma</h1>
+    <p>Aspiring Software Engineer | AI/ML Enthusiast | Cloud & Full Stack</p>
     <a href="Sai_Mani_Varma_Resume.pdf" class="btn" download>📄 Download Resume</a>
   </header>
-
-  <section class="about">
+  
+  <section>
     <h2>About Me</h2>
-    <p>I’m a passionate developer eager to apply and grow my skills in software development, full-stack engineering, AI/ML, and cloud computing.</p>
+    <p>
+      Passionate developer skilled in <b>software engineering, full-stack web, AI/ML, and cloud computing</b>.<br>
+      Eager to learn, innovate, and drive impact in dynamic technology teams.
+    </p>
   </section>
-
-  <section class="skills">
-    <h2>Skills</h2>
+  
+  <section>
+    <h2>Technical Skills</h2>
     <ul>
-      <li>C</li><li>C++</li><li>Java</li><li>Python</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>AWS</li><li>AI/ML</li>
+      <li>C, C++, Java, Python</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>AWS Cloud</li>
+      <li>AI/ML</li>
+      <li>Full-Stack Development</li>
     </ul>
   </section>
-
-  <section class="internships">
-    <h2>Internships</h2>
+  
+  <section>
+    <h2>Experience & Internships</h2>
     <ul>
-      <li>Palo Alto Cybersecurity – Eduskills (Apr–Jun 2024)</li>
-      <li>Google AI/ML – Eduskills (Jul–Sep 2024)</li>
-      <li>Google Android Developer – Eduskills (Oct–Dec 2024)</li>
-      <li>Data Science Master – Eduskills (Jan–Mar 2025)</li>
-      <li>Python Full Stack Developer – Eduskills (Apr–Jun 2025)</li>
+      <li>Palo Alto Cybersecurity Intern – Eduskills (Apr–Jun 2024)</li>
+      <li>Google AI/ML Intern – Eduskills (Jul–Sep 2024)</li>
+      <li>Google Android Developer Intern – Eduskills (Oct–Dec 2024)</li>
+      <li>Data Science Master Intern – Eduskills (Jan–Mar 2025)</li>
+      <li>Python Full Stack Developer Intern – Eduskills (Apr–Jun 2025)</li>
     </ul>
   </section>
-
-  <section class="education">
-    <h2>Education</h2>
+  
+  <section>
+    <h2>Projects</h2>
     <ul>
-      <li>B.Tech (CSE), Eluru College of Engineering (2022–2026) – CGPA: 6.0</li>
-      <li>Intermediate (MPC), Narayana Jr. College (2020–2022) – 474/1000</li>
-      <li>SSC, Bhashyam School (2019–2020) – 594/600</li>
+      <li><b>Professional Portfolio Website:</b> Designed this site to showcase skills and achievements.</li>
+      <li><b>App Lock (Pattern & Biometric):</b> Secure Android app with biometric/pattern authentication, built using Python & Android.</li>
+      <li><b>AI/ML Mini Projects (Eduskills):</b> Implemented various hands-on machine learning projects.</li>
     </ul>
   </section>
-
-  <section class="certifications">
+  
+  <section>
     <h2>Certifications</h2>
     <ul>
       <li>Complete Python Course – Aajhub & Sapienz Recruit (May 2025)</li>
-      <li>AWS Course – Completed (May 2025)</li>
-      <li>Java Course – Completed (May 2025)</li>
+      <li>AWS Basics – Completed (May 2025)</li>
+      <li>Core Java – Completed (May 2025)</li>
     </ul>
   </section>
-
-  <section class="projects">
-    <h2>Projects</h2>
+  
+  <section>
+    <h2>Education</h2>
     <ul>
-      <li>Professional Portfolio Website (This site!)</li>
-      <li>App Lock with Pattern & Biometric Security (Python + Android)</li>
-      <li>AI/ML Mini Projects with Eduskills</li>
+      <li>B.Tech (CSE), Eluru College of Engineering, 2022–2026 – CGPA: 6.0</li>
+      <li>Intermediate (MPC), Narayana Jr. College, 2020–2022 – 474/1000</li>
+      <li>SSC, Bhashyam School, 2019–2020 – 594/600</li>
     </ul>
   </section>
-
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p><strong>Email:</strong> <a href="mailto:manivarma701@gmail.com">manivarma701@gmail.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:+917989591779">+91 79895 91779</a></p>
-    <div class="social">
-      <a href="https://linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/manivarma701-jpg" target="_blank"><i class="fab fa-github"></i></a>
+  
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-list">
+      <div><strong>Email:</strong> <a href="mailto:manivarma701@gmail.com">manivarma701@gmail.com</a></div>
+      <div><strong>Phone:</strong> <a href="tel:+917989591779">+91 79895 91779</a></div>
+      <div class="social" style="margin-top:12px">
+        <a href="https://linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/manivarma701-jpg" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      </div>
     </div>
   </section>
-
+  
   <footer>
-    <p>© 2025 Jujjuvarapu Sai Mani Varma. All Rights Reserved.</p>
+    &copy; 2025 Jujjuvarapu Sai Mani Varma
   </footer>
-
   <script>
     function toggleTheme() {
       document.body.classList.toggle('dark');
+      document.querySelector('.theme-toggle').textContent = document.body.classList.contains('dark') ? '☀️':'🌙';
     }
   </script>
 </body>
