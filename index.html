@@ -5,88 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jujjuvarapu Sai Mani Varma | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f5f5f5;
-      color: #232323;
-      line-height: 1.6;
-      margin: 0;
-      transition: background .3s, color .3s;
-    }
-    body.dark {
-      background: #14181e;
-      color: #f0f0f0;
-    }
-    .theme-toggle {
-      position: fixed;
-      top: 18px; right: 23px;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 9;
-    }
-    header {
-      background: linear-gradient(90deg,#3c3b6e,#289cf9);
-      color: white;
-      text-align: center;
-      padding: 70px 14px 40px 14px;
-    }
-    header h1 { font-size: 2.3rem; }
-    header p { font-size: 1.1rem; }
-    .btn {
-      background: white; color: #2575fc;
-      padding: 10px 26px; border-radius: 30px;
-      margin-top: 17px; font-weight: bold; letter-spacing: .02em;
-      text-decoration: none; display: inline-block;
-      border: none;
-      transition: background .3s, color .3s;
-    }
-    .btn:hover { background: #2575fc; color: white; }
-    section {
-      background: white; 
-      max-width: 850px; margin:32px auto; 
-      border-radius: 13px; box-shadow: 0 5px 20px #0001;
-      padding: 42px 22px 32px 22px;
-    }
-    h2 { color: #2575fc; margin:0 0 16px 0 }
-    ul { padding: 0; }
-    ul li {
-      background: #eaf2fb; color: #232323;
-      padding: 7px 14px; margin: 7px 0;
-      border-radius: 6px; 
-    }
-    body.dark section { background: #232323; box-shadow: none;}
-    body.dark ul li { background: #181818; color: #f2f2f2;}
-    .social a {
-      margin-right: 19px;
-      font-size: 1.55rem;
-      color: #275fcc; 
-      transition:color .3s;
-      text-decoration: none;
-    }
-    .social a:hover { color: #6a11cb;}
-    .contact-list strong { display:inline-block; width:68px;}
-    footer {
-      text-align: center; 
-      padding: 20px;
-      background:none; 
-      color: #8a8a8a;
-    }
-    @media (max-width:600px) {
-      header { padding:40px 7px 22px 7px }
-      section { padding: 24px 8px 12px 8px }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
   <header>
     <h1>Jujjuvarapu Sai Mani Varma</h1>
     <p>Aspiring Software Engineer | AI/ML Enthusiast | Cloud & Full Stack</p>
-    <a href="Sai_Mani_Varma_Resume.pdf" class="btn" download>📄 Download Resume</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certificates</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="My Resume.pdf" target="_blank" class="resume-link">Resume</a>
+    </nav>
+    <a href="My Resume.pdf" class="btn" target="_blank">👁️ View Resume</a>
+    <a href="My Resume.pdf" class="btn" download>📄 Download Resume</a>
   </header>
   
-  <section>
+  <section id="about">
     <h2>About Me</h2>
     <p>
       Passionate developer skilled in <b>software engineering, full-stack web, AI/ML, and cloud computing</b>.<br>
@@ -94,7 +34,7 @@
     </p>
   </section>
   
-  <section>
+  <section id="skills">
     <h2>Technical Skills</h2>
     <ul>
       <li>C, C++, Java, Python</li>
@@ -105,7 +45,7 @@
     </ul>
   </section>
   
-  <section>
+  <section id="experience">
     <h2>Experience & Internships</h2>
     <ul>
       <li>Palo Alto Cybersecurity Intern – Eduskills (Apr–Jun 2024)</li>
@@ -116,7 +56,7 @@
     </ul>
   </section>
   
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
     <ul>
       <li><b>Professional Portfolio Website:</b> Designed this site to showcase skills and achievements.</li>
@@ -125,29 +65,49 @@
     </ul>
   </section>
   
-  <section>
-  <h2>Certifications</h2>
-  <ul>
-    <li>
-      Complete Python Course – Aajhub & Sapienz Recruit (May 2025) <br>
-      <a href="1747713808147-certificate.png" class="btn" target="_blank">👁️ View</a>
-      <a href="1747713808147-certificate.png" class="btn" download="Python_Certificate.png">📥 Download</a>
-    </li>
-    <li>
-      AWS Basics – Aajhub & Sapienz Recruit (May 2025) <br>
-      <a href="1747713992656-certificate.png" class="btn" target="_blank">👁️ View</a>
-      <a href="1747713992656-certificate.png" class="btn" download="AWS_Certificate.png">📥 Download</a>
-    </li>
-    <li>
-      Core Java – Aajhub & Sapienz Recruit (May 2025) <br>
-      <a href="1747714339048-certificate.png" class="btn" target="_blank">👁️ View</a>
-      <a href="1747714339048-certificate.png" class="btn" download="Java_Certificate.png">📥 Download</a>
-    </li>
-  </ul>
-</section>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>
+        Complete Python Course – Aajhub & Sapienz Recruit (May 2025) <br>
+        <a href="1747713808147-certificate.png" class="btn" target="_blank">👁️ View</a>
+        <a href="1747713808147-certificate.png" class="btn" download="Python_Certificate.png">📥 Download</a>
+      </li>
+      <li>
+        AWS Basics – Aajhub & Sapienz Recruit (May 2025) <br>
+        <a href="1747713992656-certificate.png" class="btn" target="_blank">👁️ View</a>
+        <a href="1747713992656-certificate.png" class="btn" download="AWS_Certificate.png">📥 Download</a>
+      </li>
+      <li>
+        Core Java – Aajhub & Sapienz Recruit (May 2025) <br>
+        <a href="1747714339048-certificate.png" class="btn" target="_blank">👁️ View</a>
+        <a href="1747714339048-certificate.png" class="btn" download="Java_Certificate.png">📥 Download</a>
+      </li>
+      <li>
+        Google AI/ML – Eduskills (2024) <br>
+        <a href="google ai-ml.pdf" class="btn" target="_blank">👁️ View</a>
+        <a href="google ai-ml.pdf" class="btn" download>📥 Download</a>
+      </li>
+      <li>
+        Data Science Master – Eduskills (2025) <br>
+        <a href="data science master.pdf" class="btn" target="_blank">👁️ View</a>
+        <a href="data science master.pdf" class="btn" download>📥 Download</a>
+      </li>
+      <li>
+        Python Full Stack – Eduskills (2025) <br>
+        <a href="fullstack python.pdf" class="btn" target="_blank">👁️ View</a>
+        <a href="fullstack python.pdf" class="btn" download>📥 Download</a>
+      </li>
+      <li>
+        Palo Alto Cybersecurity – Eduskills (2024) <br>
+        <a href="paloalto.pdf" class="btn" target="_blank">👁️ View</a>
+        <a href="paloalto.pdf" class="btn" download>📥 Download</a>
+      </li>
+    </ul>
+  </section>
 
   
-  <section>
+  <section id="education">
     <h2>Education</h2>
     <ul>
       <li>B.Tech (CSE), Eluru College of Engineering, 2022–2026 – CGPA: 6.0</li>
@@ -156,7 +116,7 @@
     </ul>
   </section>
   
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
     <div class="contact-list">
       <div><strong>Email:</strong> <a href="mailto:manivarma701@gmail.com">manivarma701@gmail.com</a></div>
@@ -166,16 +126,33 @@
         <a href="https://github.com/manivarma701-jpg" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       </div>
     </div>
+    <form class="contact-form" action="mailto:manivarma701@gmail.com" method="POST" enctype="text/plain">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+      </div>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <p class="form-note">Submitting opens your email client. Or email me directly at <a href="mailto:manivarma701@gmail.com">manivarma701@gmail.com</a>.</p>
+    </form>
   </section>
   
   <footer>
     &copy; 2025 Jujjuvarapu Sai Mani Varma
   </footer>
   <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-      document.querySelector('.theme-toggle').textContent = document.body.classList.contains('dark') ? '☀️':'🌙';
+    function applySavedTheme() {
+      const saved = localStorage.getItem('theme');
+      const isDark = saved === 'dark';
+      document.body.classList.toggle('dark', isDark);
+      document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
     }
+    function toggleTheme() {
+      const isDark = document.body.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+    }
+    document.addEventListener('DOMContentLoaded', applySavedTheme);
   </script>
 </body>
 </html>
