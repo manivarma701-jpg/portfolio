@@ -103,6 +103,12 @@
       border-radius: 8px;
       padding: 12px;
       text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(37, 117, 252, 0.2);
     }
     body.dark .cert-card {
       background: #181818;
@@ -112,12 +118,22 @@
       margin: 0 0 10px 0;
       color: #2575fc;
     }
+    .cert-card p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
     .pdf-viewer-section {
       background: #f9f9f9;
       border: 2px solid #e0e0e0;
       border-radius: 8px;
       padding: 15px;
       margin: 15px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .pdf-viewer-section:hover {
+      border-color: #2575fc;
+      background: #f0f4f8;
     }
     body.dark .pdf-viewer-section {
       background: #181818;
@@ -140,43 +156,113 @@
       gap: 10px;
       flex-wrap: wrap;
     }
-    .notification {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #ff6b6b;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      z-index: 1000;
-      animation: slideIn 0.3s ease-out;
+    .modal {
       display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.3s ease;
     }
-    .notification.show {
-      display: block;
+    .modal.show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    @keyframes slideIn {
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .modal-content {
+      background-color: white;
+      padding: 0;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 900px;
+      max-height: 85vh;
+      overflow: auto;
+      position: relative;
+      animation: slideUp 0.3s ease;
+    }
+    body.dark .modal-content {
+      background-color: #232323;
+    }
+    @keyframes slideUp {
       from {
-        transform: translateX(400px);
+        transform: translateY(50px);
         opacity: 0;
       }
       to {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
       }
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid #2575fc;
+      background: linear-gradient(90deg,#3c3b6e,#289cf9);
+      color: white;
+    }
+    .modal-header h2 {
+      margin: 0;
+      color: white;
+      border: none;
+      padding: 0;
+    }
+    .close-btn {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: transform 0.2s;
+    }
+    .close-btn:hover {
+      transform: scale(1.2);
+    }
+    .modal-body {
+      padding: 20px;
+      text-align: center;
+    }
+    .modal-body img,
+    .modal-body iframe {
+      max-width: 100%;
+      max-height: 70vh;
+      border-radius: 6px;
     }
     @media (max-width:600px) {
       header { padding:40px 7px 22px 7px }
       section { padding: 24px 8px 12px 8px }
       .pdf-embed { height: 180px; }
       .btn-group { flex-direction: column; }
+      .modal-content {
+        width: 95%;
+        max-height: 90vh;
+      }
     }
   </style>
 </head>
 <body>
   <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
-  <div class="notification" id="notification"></div>
+  
+  <!-- Modal for certificates -->
+  <div id="certModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Certificate</h2>
+        <button class="close-btn" onclick="closeCertModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
   <header>
     <img src="LinkedIn.jpeg" alt="Profile Picture" class="profile-pic">
     <h1>Jujjuvarapu Sai Mani Varma</h1>
@@ -216,16 +302,17 @@
   
   <section>
     <h2>Course Certificates</h2>
+    <p style="color: #666; font-size: 0.95rem; margin-bottom: 15px;">Click on any certificate to view it in full size</p>
     <div class="cert-grid">
-      <div class="cert-card">
+      <div class="cert-card" onclick="openCertModal('🐍 Python Course', '<img src=\"1747713808147-certificate.png\" alt=\"Python Certificate\" style=\"max-width: 100%; border-radius: 6px;\">')">
         <h4>🐍 Python Course</h4>
         <p>Complete Python Course</p>
       </div>
-      <div class="cert-card">
+      <div class="cert-card" onclick="openCertModal('☁️ AWS Basics', '<img src=\"1747713992656-certificate.png\" alt=\"AWS Certificate\" style=\"max-width: 100%; border-radius: 6px;\">')">
         <h4>☁️ AWS Basics</h4>
         <p>AWS Fundamentals</p>
       </div>
-      <div class="cert-card">
+      <div class="cert-card" onclick="openCertModal('☕ Core Java', '<img src=\"1747714339048-certificate.png\" alt=\"Java Certificate\" style=\"max-width: 100%; border-radius: 6px;\">')">
         <h4>☕ Core Java</h4>
         <p>Java Programming</p>
       </div>
@@ -234,23 +321,24 @@
 
   <section>
     <h2>📚 Internship Certifications & Credentials</h2>
+    <p style="color: #666; font-size: 0.95rem; margin-bottom: 15px;">Click on any section to view the full certificate</p>
     
-    <div class="pdf-viewer-section">
+    <div class="pdf-viewer-section" onclick="openCertModal('🔒 Palo Alto Cybersecurity Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/paloalto.pdf\" style=\"width: 100%; height: 600px; border-radius: 6px;\"></iframe>')">
       <h4>🔒 Palo Alto Cybersecurity Internship</h4>
       <p>Advanced cybersecurity training and certifications</p>
     </div>
 
-    <div class="pdf-viewer-section">
+    <div class="pdf-viewer-section" onclick="openCertModal('🤖 Google AI/ML Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/google%20ai-ml.pdf\" style=\"width: 100%; height: 600px; border-radius: 6px;\"></iframe>')">
       <h4>🤖 Google AI/ML Internship</h4>
       <p>Machine learning and artificial intelligence fundamentals</p>
     </div>
 
-    <div class="pdf-viewer-section">
+    <div class="pdf-viewer-section" onclick="openCertModal('📊 Data Science Master Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/data%20science%20master.pdf\" style=\"width: 100%; height: 600px; border-radius: 6px;\"></iframe>')">
       <h4>📊 Data Science Master Internship</h4>
       <p>Comprehensive data science and analytics training</p>
     </div>
 
-    <div class="pdf-viewer-section">
+    <div class="pdf-viewer-section" onclick="openCertModal('🌐 Full Stack Python Developer Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/fullstack%20python.pdf\" style=\"width: 100%; height: 600px; border-radius: 6px;\"></iframe>')">
       <h4>🌐 Full Stack Python Developer Internship</h4>
       <p>Complete full-stack development with Python</p>
     </div>
@@ -286,29 +374,29 @@
       document.querySelector('.theme-toggle').textContent = document.body.classList.contains('dark') ? '☀️':'🌙';
     }
 
-    function showNotification(message) {
-      const notification = document.getElementById('notification');
-      notification.textContent = message;
-      notification.classList.add('show');
-      setTimeout(() => {
-        notification.classList.remove('show');
-      }, 3000);
+    function openCertModal(title, content) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalBody').innerHTML = content;
+      document.getElementById('certModal').classList.add('show');
+      document.body.style.overflow = 'hidden';
     }
 
-    // Prevent downloads and show notification
-    document.addEventListener('click', function(e) {
-      if (e.target.href && (e.target.href.includes('.pdf') || e.target.href.includes('.png') || e.target.href.includes('.jpeg') || e.target.href.includes('.jpg'))) {
-        e.preventDefault();
-        showNotification('⚠️ Downloads are not allowed for certificates and documents');
+    function closeCertModal() {
+      document.getElementById('certModal').classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('certModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeCertModal();
       }
     });
 
-    // Also prevent right-click download
-    document.addEventListener('contextmenu', function(e) {
-      const element = e.target;
-      if (element.tagName === 'IMG' || element.tagName === 'IFRAME' || (element.href && (element.href.includes('.pdf') || element.href.includes('.png') || element.href.includes('.jpeg') || element.href.includes('.jpg')))) {
-        e.preventDefault();
-        showNotification('⚠️ Downloads are not allowed for certificates and documents');
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeCertModal();
       }
     });
   </script>
