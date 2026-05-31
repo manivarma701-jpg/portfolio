@@ -140,6 +140,32 @@
       gap: 10px;
       flex-wrap: wrap;
     }
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ff6b6b;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      animation: slideIn 0.3s ease-out;
+      display: none;
+    }
+    .notification.show {
+      display: block;
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
     @media (max-width:600px) {
       header { padding:40px 7px 22px 7px }
       section { padding: 24px 8px 12px 8px }
@@ -150,6 +176,7 @@
 </head>
 <body>
   <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+  <div class="notification" id="notification"></div>
   <header>
     <img src="LinkedIn.jpeg" alt="Profile Picture" class="profile-pic">
     <h1>Jujjuvarapu Sai Mani Varma</h1>
@@ -193,23 +220,14 @@
       <div class="cert-card">
         <h4>🐍 Python Course</h4>
         <p>Complete Python Course</p>
-        <div class="btn-group">
-          <a href="1747713808147-certificate.png" target="_blank" class="btn">👁️ View</a>
-        </div>
       </div>
       <div class="cert-card">
         <h4>☁️ AWS Basics</h4>
         <p>AWS Fundamentals</p>
-        <div class="btn-group">
-          <a href="1747713992656-certificate.png" target="_blank" class="btn">👁️ View</a>
-        </div>
       </div>
       <div class="cert-card">
         <h4>☕ Core Java</h4>
         <p>Java Programming</p>
-        <div class="btn-group">
-          <a href="1747714339048-certificate.png" target="_blank" class="btn">👁️ View</a>
-        </div>
       </div>
     </div>
   </section>
@@ -220,25 +238,21 @@
     <div class="pdf-viewer-section">
       <h4>🔒 Palo Alto Cybersecurity Internship</h4>
       <p>Advanced cybersecurity training and certifications</p>
-      <iframe src="https://github.com/manivarma701-jpg/portfolio/raw/main/paloalto.pdf" class="pdf-embed"></iframe>
     </div>
 
     <div class="pdf-viewer-section">
       <h4>🤖 Google AI/ML Internship</h4>
       <p>Machine learning and artificial intelligence fundamentals</p>
-      <iframe src="https://github.com/manivarma701-jpg/portfolio/raw/main/google%20ai-ml.pdf" class="pdf-embed"></iframe>
     </div>
 
     <div class="pdf-viewer-section">
       <h4>📊 Data Science Master Internship</h4>
       <p>Comprehensive data science and analytics training</p>
-      <iframe src="https://github.com/manivarma701-jpg/portfolio/raw/main/data%20science%20master.pdf" class="pdf-embed"></iframe>
     </div>
 
     <div class="pdf-viewer-section">
       <h4>🌐 Full Stack Python Developer Internship</h4>
       <p>Complete full-stack development with Python</p>
-      <iframe src="https://github.com/manivarma701-jpg/portfolio/raw/main/fullstack%20python.pdf" class="pdf-embed"></iframe>
     </div>
   </section>
   
@@ -271,6 +285,32 @@
       document.body.classList.toggle('dark');
       document.querySelector('.theme-toggle').textContent = document.body.classList.contains('dark') ? '☀️':'🌙';
     }
+
+    function showNotification(message) {
+      const notification = document.getElementById('notification');
+      notification.textContent = message;
+      notification.classList.add('show');
+      setTimeout(() => {
+        notification.classList.remove('show');
+      }, 3000);
+    }
+
+    // Prevent downloads and show notification
+    document.addEventListener('click', function(e) {
+      if (e.target.href && (e.target.href.includes('.pdf') || e.target.href.includes('.png') || e.target.href.includes('.jpeg') || e.target.href.includes('.jpg'))) {
+        e.preventDefault();
+        showNotification('⚠️ Downloads are not allowed for certificates and documents');
+      }
+    });
+
+    // Also prevent right-click download
+    document.addEventListener('contextmenu', function(e) {
+      const element = e.target;
+      if (element.tagName === 'IMG' || element.tagName === 'IFRAME' || (element.href && (element.href.includes('.pdf') || element.href.includes('.png') || element.href.includes('.jpeg') || element.href.includes('.jpg')))) {
+        e.preventDefault();
+        showNotification('⚠️ Downloads are not allowed for certificates and documents');
+      }
+    });
   </script>
 </body>
 </html>
