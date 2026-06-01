@@ -21,35 +21,25 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Dark Mode */
-body.dark {
-  background: #14181e;
-  color: #f0f0f0;
-}
-
 /* ============================================
-   THEME TOGGLE BUTTON
+   YEAR BADGE
    ============================================ */
-.theme-toggle {
-  position: fixed;
-  top: 18px;
-  right: 23px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1000;
-  background: none;
-  border: none;
-  padding: 8px;
-  transition: transform 0.3s ease;
+.year-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #2575fc, #64b5f6);
+  color: white;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.15);
-}
-
-.theme-toggle:active {
-  transform: scale(0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
+  animation: fadeIn 0.6s ease-out;
 }
 
 /* ============================================
@@ -61,6 +51,23 @@ header {
   text-align: center;
   padding: 70px 14px 40px 14px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+header .profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid white;
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+header .profile-pic:hover {
+  transform: scale(1.05);
 }
 
 header h1 {
@@ -145,15 +152,6 @@ section:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-body.dark section {
-  background: #232323;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-body.dark section:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
 /* ============================================
    HEADINGS
    ============================================ */
@@ -165,10 +163,6 @@ h2 {
   border-bottom: 3px solid #2575fc;
   padding-bottom: 10px;
   display: inline-block;
-}
-
-body.dark h2 {
-  color: #64b5f6;
 }
 
 /* ============================================
@@ -194,23 +188,9 @@ ul li:hover {
   transform: translateX(5px);
 }
 
-body.dark ul li {
-  background: #181818;
-  color: #f2f2f2;
-  border-left-color: #64b5f6;
-}
-
-body.dark ul li:hover {
-  background: #2a2a2a;
-}
-
 ul li strong {
   color: #2575fc;
   font-weight: 700;
-}
-
-body.dark ul li strong {
-  color: #64b5f6;
 }
 
 /* ============================================
@@ -227,12 +207,67 @@ a:hover {
   text-decoration: underline;
 }
 
-body.dark a {
-  color: #64b5f6;
+/* ============================================
+   CERTIFICATE GRID & CARDS
+   ============================================ */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
 }
 
-body.dark a:hover {
-  color: #81d4fa;
+.cert-card {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(37, 117, 252, 0.2);
+  border-color: #2575fc;
+  background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+}
+
+.cert-icon {
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #2575fc, #64b5f6);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-icon {
+  transform: scale(1.1) rotateZ(10deg);
+}
+
+.cert-card h4 {
+  color: #2575fc;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cert-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
 }
 
 /* ============================================
@@ -252,10 +287,6 @@ body.dark a:hover {
   width: 75px;
   font-weight: 700;
   color: #2575fc;
-}
-
-body.dark .contact-list strong {
-  color: #64b5f6;
 }
 
 /* ============================================
@@ -279,12 +310,90 @@ body.dark .contact-list strong {
   text-decoration: none;
 }
 
-body.dark .social a {
-  color: #64b5f6;
+/* ============================================
+   MODAL STYLES
+   ============================================ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.3s ease;
 }
 
-body.dark .social a:hover {
-  color: #81d4fa;
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 2px solid #2575fc;
+  background: linear-gradient(90deg, #3c3b6e, #289cf9);
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: white;
+  border: none;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+.modal-body {
+  padding: 24px;
+  max-height: calc(85vh - 80px);
+  overflow-y: auto;
+}
+
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-body iframe {
+  border-radius: 8px;
 }
 
 /* ============================================
@@ -297,11 +406,6 @@ footer {
   color: #8a8a8a;
   margin-top: 40px;
   border-top: 1px solid #ddd;
-}
-
-body.dark footer {
-  border-top-color: #333;
-  color: #999;
 }
 
 footer p {
@@ -325,6 +429,11 @@ footer p {
     font-size: 1rem;
   }
 
+  header .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
   section {
     padding: 30px 16px 24px 16px;
     margin: 20px auto;
@@ -340,6 +449,17 @@ footer p {
     margin: 8px 4px;
   }
 
+  .cert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+  }
+
+  .cert-icon {
+    font-size: 2.8rem;
+    width: 70px;
+    height: 70px;
+  }
+
   .contact-list strong {
     display: block;
     margin-bottom: 5px;
@@ -348,6 +468,14 @@ footer p {
 
   .social {
     flex-wrap: wrap;
+  }
+
+  .year-badge {
+    width: 45px;
+    height: 45px;
+    font-size: 0.95rem;
+    top: 15px;
+    right: 15px;
   }
 }
 
@@ -362,6 +490,12 @@ footer p {
 
   header p {
     font-size: 0.95rem;
+  }
+
+  header .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px auto;
   }
 
   section {
@@ -384,14 +518,64 @@ footer p {
     margin: 6px 2px;
   }
 
-  .theme-toggle {
-    top: 12px;
-    right: 12px;
-    font-size: 20px;
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .cert-card {
+    padding: 20px 16px;
+  }
+
+  .cert-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .cert-card h4 {
+    font-size: 1rem;
+  }
+
+  .cert-card p {
+    font-size: 0.85rem;
   }
 
   main {
     padding: 0 10px;
+  }
+
+  .year-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 90vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .year-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
   }
 }
 
@@ -441,7 +625,7 @@ section {
    PRINT STYLES
    ============================================ */
 @media print {
-  .theme-toggle {
+  .year-badge {
     display: none;
   }
 
@@ -475,7 +659,7 @@ button:focus {
   outline-offset: 2px;
 }
 
-body.dark a:focus,
-body.dark button:focus {
-  outline-color: #64b5f6;
+.cert-card:focus {
+  outline: 2px solid #2575fc;
+  outline-offset: 2px;
 }
