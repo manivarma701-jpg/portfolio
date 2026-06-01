@@ -132,11 +132,14 @@
   </section>
   
   <footer>
-    &copy; 2025 Jujjuvarapu Sai Mani Varma
+    &copy; 2025 - <span id="currentYear">2026</span> Jujjuvarapu Sai Mani Varma
   </footer>
   <script>
     // Auto-update year badge
     document.getElementById('yearBadge').textContent = new Date().getFullYear();
+    
+    // Auto-update footer year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     function openCertModal(title, content) {
       document.getElementById('modalTitle').textContent = title;
