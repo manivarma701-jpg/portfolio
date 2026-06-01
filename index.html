@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
-  
   <!-- Modal for certificates -->
   <div id="certModal" class="modal">
     <div class="modal-content">
@@ -22,6 +20,7 @@
   </div>
 
   <header>
+    <div class="year-badge" id="yearBadge">2026</div>
     <img src="LinkedIn.jpeg" alt="Profile Picture" class="profile-pic">
     <h1>Jujjuvarapu Sai Mani Varma</h1>
     <p>Aspiring Software Engineer | AI/ML Enthusiast | Cloud & Full Stack</p>
@@ -60,18 +59,21 @@
   
   <section>
     <h2>Course Certificates</h2>
-    <p style="color: #666; font-size: 0.95rem; margin-bottom: 15px;">Click on any certificate to view it in full size</p>
+    <p style="color: #666; font-size: 0.95rem; margin-bottom: 25px;">Click on any certificate to view it in full size</p>
     <div class="cert-grid">
-      <div class="cert-card" onclick="openCertModal('🐍 Python Course', '<img src=\"1747713808147-certificate.png\" alt=\"Python Certificate\" style=\"max-width: 100%; border-radius: 6px;\">')">
-        <h4>🐍 Python Course</h4>
-        <p>Complete Python Course</p>
+      <div class="cert-card" onclick="openCertModal('🐍 Python Course', '<img src=\"1747713808147-certificate.png\" alt=\"Python Certificate\" style=\"max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\">')">
+        <div class="cert-icon">🐍</div>
+        <h4>Python Course</h4>
+        <p>Complete Python</p>
       </div>
-      <div class="cert-card" onclick="openCertModal('☁️ AWS Basics', '<img src=\"1747713992656-certificate.png\" alt=\"AWS Certificate\" style=\"max-width: 100%; border-radius: 6px;\">')">
-        <h4>☁️ AWS Basics</h4>
+      <div class="cert-card" onclick="openCertModal('☁️ AWS Basics', '<img src=\"1747713992656-certificate.png\" alt=\"AWS Certificate\" style=\"max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\">')">
+        <div class="cert-icon">☁️</div>
+        <h4>AWS Basics</h4>
         <p>AWS Fundamentals</p>
       </div>
-      <div class="cert-card" onclick="openCertModal('☕ Core Java', '<img src=\"1747714339048-certificate.png\" alt=\"Java Certificate\" style=\"max-width: 100%; border-radius: 6px;\">')">
-        <h4>☕ Core Java</h4>
+      <div class="cert-card" onclick="openCertModal('☕ Core Java', '<img src=\"1747714339048-certificate.png\" alt=\"Java Certificate\" style=\"max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\">')">
+        <div class="cert-icon">☕</div>
+        <h4>Core Java</h4>
         <p>Java Programming</p>
       </div>
     </div>
@@ -79,26 +81,32 @@
 
   <section>
     <h2>📚 Internship Certifications & Credentials</h2>
-    <p style="color: #666; font-size: 0.95rem; margin-bottom: 15px;">Click on any section to view the full certificate</p>
+    <p style="color: #666; font-size: 0.95rem; margin-bottom: 25px;">Click on any section to view the full certificate</p>
     
-    <div class="pdf-viewer-section" onclick="openCertModal('🔒 Palo Alto Cybersecurity Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/paloalto.pdf\" style=\"width: 100%; height: 500px; border: none; border-radius: 6px;\"></iframe>')">
-      <h4>🔒 Palo Alto Cybersecurity Internship</h4>
-      <p>Advanced cybersecurity training and certifications</p>
-    </div>
+    <div class="cert-grid">
+      <div class="cert-card" onclick="openCertModal('🔒 Palo Alto Cybersecurity Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/paloalto.pdf\" style=\"width: 100%; height: 600px; border: none; border-radius: 8px;\"></iframe>')">
+        <div class="cert-icon">🔒</div>
+        <h4>Cybersecurity</h4>
+        <p>Palo Alto Internship</p>
+      </div>
 
-    <div class="pdf-viewer-section" onclick="openCertModal('🤖 Google AI/ML Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/google%20ai-ml.pdf\" style=\"width: 100%; height: 500px; border: none; border-radius: 6px;\"></iframe>')">
-      <h4>🤖 Google AI/ML Internship</h4>
-      <p>Machine learning and artificial intelligence fundamentals</p>
-    </div>
+      <div class="cert-card" onclick="openCertModal('🤖 Google AI/ML Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/google%20ai-ml.pdf\" style=\"width: 100%; height: 600px; border: none; border-radius: 8px;\"></iframe>')">
+        <div class="cert-icon">🤖</div>
+        <h4>AI/ML</h4>
+        <p>Google AI/ML Internship</p>
+      </div>
 
-    <div class="pdf-viewer-section" onclick="openCertModal('📊 Data Science Master Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/data%20science%20master.pdf\" style=\"width: 100%; height: 500px; border: none; border-radius: 6px;\"></iframe>')">
-      <h4>📊 Data Science Master Internship</h4>
-      <p>Comprehensive data science and analytics training</p>
-    </div>
+      <div class="cert-card" onclick="openCertModal('📊 Data Science Master Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/data%20science%20master.pdf\" style=\"width: 100%; height: 600px; border: none; border-radius: 8px;\"></iframe>')">
+        <div class="cert-icon">📊</div>
+        <h4>Data Science</h4>
+        <p>Data Science Master</p>
+      </div>
 
-    <div class="pdf-viewer-section" onclick="openCertModal('🌐 Full Stack Python Developer Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/fullstack%20python.pdf\" style=\"width: 100%; height: 500px; border: none; border-radius: 6px;\"></iframe>')">
-      <h4>🌐 Full Stack Python Developer Internship</h4>
-      <p>Complete full-stack development with Python</p>
+      <div class="cert-card" onclick="openCertModal('🌐 Full Stack Python Developer Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/fullstack%20python.pdf\" style=\"width: 100%; height: 600px; border: none; border-radius: 8px;\"></iframe>')">
+        <div class="cert-icon">🌐</div>
+        <h4>Full Stack</h4>
+        <p>Python Developer Internship</p>
+      </div>
     </div>
   </section>
   
@@ -127,10 +135,8 @@
     &copy; 2025 Jujjuvarapu Sai Mani Varma
   </footer>
   <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-      document.querySelector('.theme-toggle').textContent = document.body.classList.contains('dark') ? '☀️':'🌙';
-    }
+    // Auto-update year badge
+    document.getElementById('yearBadge').textContent = new Date().getFullYear();
 
     function openCertModal(title, content) {
       document.getElementById('modalTitle').textContent = title;
