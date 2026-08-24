@@ -1,170 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jujjuvarapu Sai Mani Varma | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jujjuvarapu Sai Mani Varma — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Modal for certificates -->
-  <div id="certModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 id="modalTitle">Certificate</h2>
-        <button class="close-btn" onclick="closeCertModal()">&times;</button>
-      </div>
-      <div class="modal-body" id="modalBody"></div>
+  <header class="nav">
+    <div class="container">
+      <a class="logo" href="#home">Jujjuvarapu</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </div>
-
-  <header>
-    <div class="year-badge" id="yearBadge">2026</div>
-    <img src="LinkedIn.jpeg" alt="Profile Picture" class="profile-pic">
-    <h1>Jujjuvarapu Sai Mani Varma</h1>
-    <p>Aspiring Software Engineer | AI/ML Enthusiast | Cloud & Full Stack</p>
-    <a href="My%20Resume.pdf" class="btn btn-outline" target="_blank">👁️ View Resume</a>
   </header>
-  
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Passionate developer skilled in <b>software engineering, full-stack web, AI/ML, and cloud computing</b>.<br>
-      Eager to learn, innovate, and drive impact in dynamic technology teams.
-    </p>
-  </section>
-  
-  <section>
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>C, C++, Java, Python</li>
-      <li>HTML, CSS, JavaScript</li>
-      <li>AWS Cloud</li>
-      <li>AI/ML</li>
-      <li>Full-Stack Development</li>
-    </ul>
-  </section>
-  
-  <section>
-    <h2>Experience & Internships</h2>
-    <ul>
-      <li>Palo Alto Cybersecurity Intern – Eduskills (Apr–Jun 2024)</li>
-      <li>Google AI/ML Intern – Eduskills (Jul–Sep 2024)</li>
-      <li>Google Android Developer Intern – Eduskills (Oct–Dec 2024)</li>
-      <li>Data Science Master Intern – Eduskills (Jan–Mar 2025)</li>
-      <li>Python Full Stack Developer Intern – Eduskills (Apr–Jun 2025)</li>
-    </ul>
-  </section>
-  
-  <section>
-    <h2>Course Certificates</h2>
-    <p style="color: #666; font-size: 0.95rem; margin-bottom: 25px;">Click on any certificate to view it in full size</p>
-    <div class="cert-grid">
-      <div class="cert-card" onclick="openCertModal('🐍 Python Course', '<img src=\"1747713808147-certificate.png\" alt=\"Python Certificate\" style=\"max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\">')">
-        <div class="cert-icon">🐍</div>
-        <h4>Python Course</h4>
-        <p>Complete Python</p>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Jujjuvarapu Sai Mani Varma</h1>
+          <p class="tagline">Aspiring Full Stack Developer</p>
+          <p class="lead">I build responsive, accessible web apps and small tools. I’m focused on learning full-stack development and shipping clean, well-documented projects.</p>
+          <p>
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </p>
+        </div>
+        <div class="hero-photo">
+          <img src="https://avatars.githubusercontent.com/u/221798114?v=4" alt="profile photo">
+        </div>
       </div>
-      <div class="cert-card" onclick="openCertModal('☁️ AWS Basics', '<img src=\"1747713992656-certificate.png\" alt=\"AWS Certificate\" style=\"max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\">')">
-        <div class="cert-icon">☁️</div>
-        <h4>AWS Basics</h4>
-        <p>AWS Fundamentals</p>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About</h2>
+        <p>Hi — I’m Jujjuvarapu. I’m an aspiring Full Stack Developer with hands-on experience building small web applications, utilities, and UI components. I enjoy turning ideas into working projects and continuously improving my skills in JavaScript, HTML, and CSS.</p>
+        <p>I build mini-projects that solve everyday problems (timers, generators, small UI tools) and use them to learn best practices for frontend and client-side logic.</p>
       </div>
-      <div class="cert-card" onclick="openCertModal('☕ Core Java', '<img src=\"1747714339048-certificate.png\" alt=\"Java Certificate\" style=\"max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);\">')">
-        <div class="cert-icon">☕</div>
-        <h4>Core Java</h4>
-        <p>Java Programming</p>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid">
+
+          <article class="card">
+            <h3><a href="https://github.com/manivarma701-jpg/Colour-Palette-Picker" target="_blank" rel="noopener">Colour-Palette-Picker</a></h3>
+            <p>Mini color palette generator and picker built with JavaScript. Quickly create and copy color palettes for your designs.</p>
+            <p class="meta">JavaScript • <a href="https://github.com/manivarma701-jpg/Colour-Palette-Picker" target="_blank">GitHub</a></p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/manivarma701-jpg/Countdown-Timer" target="_blank" rel="noopener">Countdown-Timer</a></h3>
+            <p>Simple countdown timer with start/stop functionality — useful for productivity or event countdowns.</p>
+            <p class="meta">HTML • <a href="https://github.com/manivarma701-jpg/Countdown-Timer" target="_blank">GitHub</a></p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/manivarma701-jpg/Digital-Clock" target="_blank" rel="noopener">Digital-Clock</a></h3>
+            <p>Digital clock display built with minimal HTML/CSS/JS showcasing time formatting and simple UI updates.</p>
+            <p class="meta">HTML • <a href="https://github.com/manivarma701-jpg/Digital-Clock" target="_blank">GitHub</a></p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/manivarma701-jpg/Password-Generator" target="_blank" rel="noopener">Password-Generator</a></h3>
+            <p>Secure password generator that creates customizable passwords with uppercase, lowercase, numbers, and symbols.</p>
+            <p class="meta">JavaScript • <a href="https://github.com/manivarma701-jpg/Password-Generator" target="_blank">GitHub</a></p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/manivarma701-jpg/Quote-Generator" target="_blank" rel="noopener">Quote-Generator</a></h3>
+            <p>Small app that shows random quotes and demonstrates working with arrays and DOM updates.</p>
+            <p class="meta">JavaScript • <a href="https://github.com/manivarma701-jpg/Quote-Generator" target="_blank">GitHub</a></p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/manivarma701-jpg/To-Do-List" target="_blank" rel="noopener">To-Do-List</a></h3>
+            <p>A simple to-do application showing dynamic list management and local state in the browser.</p>
+            <p class="meta">JavaScript • <a href="https://github.com/manivarma701-jpg/To-Do-List" target="_blank">GitHub</a></p>
+          </article>
+
+        </div>
       </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skill-list">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Responsive Design</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch — email me at <a href="mailto:manivarma701@gmail.com">manivarma701@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank">LinkedIn</a>.</p>
+        <p class="note">This site was generated and published to your GitHub repository. Feel free to tell me any edits you want.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Jujjuvarapu Sai Mani Varma — Built with HTML & CSS</p>
     </div>
-  </section>
-
-  <section>
-    <h2>📚 Internship Certifications & Credentials</h2>
-    <p style="color: #666; font-size: 0.95rem; margin-bottom: 25px;">Click on any section to view the full certificate</p>
-    
-    <div class="cert-grid">
-      <div class="cert-card" onclick="openCertModal('🔒 Palo Alto Cybersecurity Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/paloalto.pdf\" style=\"width: 100%; height: 600px; border: none; border-radius: 8px;\"></iframe>')">
-        <div class="cert-icon">🔒</div>
-        <h4>Cybersecurity</h4>
-        <p>Palo Alto Internship</p>
-      </div>
-
-      <div class="cert-card" onclick="openCertModal('🤖 Google AI/ML Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/google%20ai-ml.pdf\" style=\"width: 100%; height: 600px; border: none; border-radius: 8px;\"></iframe>')">
-        <div class="cert-icon">🤖</div>
-        <h4>AI/ML</h4>
-        <p>Google AI/ML Internship</p>
-      </div>
-
-      <div class="cert-card" onclick="openCertModal('📊 Data Science Master Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/data%20science%20master.pdf\" style=\"width: 100%; height: 600px; border: none; border-radius: 8px;\"></iframe>')">
-        <div class="cert-icon">📊</div>
-        <h4>Data Science</h4>
-        <p>Data Science Master</p>
-      </div>
-
-      <div class="cert-card" onclick="openCertModal('🌐 Full Stack Python Developer Internship', '<iframe src=\"https://github.com/manivarma701-jpg/portfolio/raw/main/fullstack%20python.pdf\" style=\"width: 100%; height: 600px; border: none; border-radius: 8px;\"></iframe>')">
-        <div class="cert-icon">🌐</div>
-        <h4>Full Stack</h4>
-        <p>Python Developer Internship</p>
-      </div>
-    </div>
-  </section>
-  
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>B.Tech (CSE), Eluru College of Engineering, 2022–2026 – CGPA: 6.0</li>
-      <li>Intermediate (MPC), Narayana Jr. College, 2020–2022 – 474/1000</li>
-      <li>SSC, Bhashyam School, 2019–2020 – 594/600</li>
-    </ul>
-  </section>
-  
-  <section>
-    <h2>Contact</h2>
-    <div class="contact-list">
-      <div><strong>Email:</strong> <a href="mailto:manivarma701@gmail.com">manivarma701@gmail.com</a></div>
-      <div><strong>Phone:</strong> <a href="tel:+919392147272">+91 93921 47272</a></div>
-      <div class="social" style="margin-top:12px">
-        <a href="https://linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/manivarma701-jpg" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
-  </section>
-  
-  <footer>
-    &copy; 2025 - <span id="currentYear">2026</span> Jujjuvarapu Sai Mani Varma
   </footer>
+
   <script>
-    // Auto-update year badge
-    document.getElementById('yearBadge').textContent = new Date().getFullYear();
-    
-    // Auto-update footer year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-    function openCertModal(title, content) {
-      document.getElementById('modalTitle').textContent = title;
-      document.getElementById('modalBody').innerHTML = content;
-      document.getElementById('certModal').classList.add('show');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeCertModal() {
-      document.getElementById('certModal').classList.remove('show');
-      document.body.style.overflow = 'auto';
-    }
-
-    // Close modal when clicking outside
-    document.getElementById('certModal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeCertModal();
-      }
-    });
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeCertModal();
-      }
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth'});
+        }
+      });
     });
   </script>
 </body>
