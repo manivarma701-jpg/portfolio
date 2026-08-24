@@ -12,7 +12,7 @@ Welcome to my professional portfolio! This is a personal website showcasing my s
 
 ## 👨‍💻 About
 
-I'm an aspiring software engineer passionate about **software engineering, full-stack web development, AI/ML, and cloud computing**. Currently pursuing B.Tech in Computer Science Engineering from Eluru College of Engineering (2022-2026).
+I'm an aspiring software engineer passionate about **software engineering, full-stack web development, AI/ML, and cloud computing**. Currently pursuing B.Tech in Computer Science Engineering from [...]
 
 ### Key Highlights:
 - 🎓 Multiple internships in cybersecurity, AI/ML, Android development, and data science
@@ -110,9 +110,18 @@ portfolio/
 
 ## 📞 Contact & Connect
 
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/manivarma701-jpg)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manivarma701@gmail.com)
+
+</div>
+
+### Direct Contact Info:
 - 📧 **Email:** [manivarma701@gmail.com](mailto:manivarma701@gmail.com)
 - 📱 **Phone:** [+91 79895 91779](tel:+917989591779)
-- 🔗 **LinkedIn:** [Jujjuvarapu Sai Mani Varma](https://linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a)
+- 🔗 **LinkedIn:** [Jujjuvarapu Sai Mani Varma](https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a)
 - 🐙 **GitHub:** [@manivarma701-jpg](https://github.com/manivarma701-jpg)
 
 ## 🌙 Dark Mode
@@ -133,7 +142,7 @@ This portfolio is open source. Feel free to use it as inspiration for your own p
 
 ---
 
-**Last Updated:** May 2025  
+**Last Updated:** August 2026  
 **Status:** ✅ Active & Maintained
 
 *Made with ❤️ by Jujjuvarapu Sai Mani Varma*
