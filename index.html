@@ -1,324 +1,1482 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jujjuvarapu Sai Mani Varma — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKd7185RwfV8CI0DclZch9/a34WGryDbyproktXODUpdLoDiQrql9blockMe9k6qBLSEIQbnbnBCLUEVQ0tIA34K8LMsY+JRGXeIstLzM=" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jujjuvarapu Sai Mani Varma — Software Developer & CS Engineer</title>
+  <meta name="description" content="Portfolio & Resume of Jujjuvarapu Sai Mani Varma — Computer Science Engineer, Full Stack Python/Django Developer, Android & AI/ML Enthusiast." />
+  <meta name="keywords" content="Sai Mani Varma, Jujjuvarapu Sai Mani Varma, Eluru, Portfolio, Python Full Stack, Django, Android, AI ML, LeetCode, Software Engineer" />
+  <meta name="author" content="Jujjuvarapu Sai Mani Varma" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Jujjuvarapu Sai Mani Varma — Portfolio & Resume" />
+  <meta property="og:description" content="Computer Science Engineer | Full Stack Python/Django, Android, AI/ML & Web Development." />
+  <meta property="og:image" content="profile.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Outfit, Inter & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="container">
-      <a class="logo" href="#home">Jujjuvarapu</a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo" id="nav-logo">
+        <span class="logo-bracket">&lt;</span><span class="logo-text">Sai Mani Varma</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#about" class="nav-item"><i class="fa-solid fa-user"></i> About</a>
+        <a href="#experience" class="nav-item"><i class="fa-solid fa-briefcase"></i> Experience</a>
+        <a href="#skills" class="nav-item"><i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#projects" class="nav-item"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+        <a href="#education" class="nav-item"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+        <a href="#contact" class="nav-item"><i class="fa-solid fa-paper-plane"></i> Contact</a>
       </nav>
+
+      <!-- Action Button & Hamburger -->
+      <div class="nav-actions">
+        <a href="resume.html" target="_blank" class="btn btn-sm btn-primary" id="nav-resume-btn">
+          <i class="fa-solid fa-file-pdf"></i> <span>View Resume</span>
+        </a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#home" class="mobile-nav-item"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#about" class="mobile-nav-item"><i class="fa-solid fa-user"></i> About</a>
+      <a href="#experience" class="mobile-nav-item"><i class="fa-solid fa-briefcase"></i> Experience</a>
+      <a href="#skills" class="mobile-nav-item"><i class="fa-solid fa-code"></i> Skills</a>
+      <a href="#projects" class="mobile-nav-item"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+      <a href="#education" class="mobile-nav-item"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+      <a href="#contact" class="mobile-nav-item"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      
+      <div class="mobile-menu-socials">
+        <a href="https://github.com/manivarma701-jpg" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.leetcode.com/u/saimanivarma/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+        <a href="mailto:manivarma701@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+919392147272" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
       <div class="container hero-grid">
+        
         <div class="hero-content">
-          <h1>Jujjuvarapu Sai Mani Varma</h1>
-          <p class="tagline">Aspiring Full Stack Developer</p>
-          <p class="lead">I build responsive, accessible web apps and small tools. I'm focused on learning full-stack development and shipping clean, well-documented projects.</p>
-          <p>
-            <a class="btn" href="#projects">View Projects</a>
-            <a class="btn ghost" href="#contact">Contact</a>
+          <!-- Status Pill -->
+          <div class="status-pill animate-fade-in">
+            <span class="status-dot"></span>
+            <span>Seeking Software Engineer Opportunities</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-in">
+            JUJJUVARAPU <br /><span class="gradient-text">SAI MANI VARMA</span>
+          </h1>
+
+          <div class="hero-role animate-fade-in">
+            <i class="fa-solid fa-terminal code-icon"></i>
+            <span class="role-highlight">Computer Science Engineer</span>
+            <span class="role-sub">& Full Stack Developer</span>
+          </div>
+
+          <p class="hero-bio animate-fade-in">
+            Aspiring Computer Science Engineer seeking opportunities to apply technical skills and problem-solving abilities to contribute to innovative software projects while continuously learning and growing in the IT industry.
           </p>
-        </div>
-        <div class="hero-photo">
-          <img src="https://avatars.githubusercontent.com/u/221798114?v=4" alt="profile photo">
-        </div>
-      </div>
-    </section>
 
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About</h2>
-        <p>Hi — I'm Jujjuvarapu. I'm an aspiring Full Stack Developer with hands-on experience building small web applications, utilities, and UI components. I enjoy turning ideas into working products and learning from every project.</p>
-        <p>I build mini-projects that solve everyday problems (timers, generators, small UI tools) and use them to learn best practices for frontend and client-side logic.</p>
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="grid">
-
-          <article class="card">
-            <h3><a href="https://github.com/manivarma701-jpg/Colour-Palette-Picker" target="_blank" rel="noopener">Colour-Palette-Picker</a></h3>
-            <p>Mini color palette generator and picker built with JavaScript. Quickly create and copy color palettes for your designs.</p>
-            <p class="meta">JavaScript • <a href="https://github.com/manivarma701-jpg/Colour-Palette-Picker" target="_blank">GitHub</a></p>
-          </article>
-
-          <article class="card">
-            <h3><a href="https://github.com/manivarma701-jpg/Countdown-Timer" target="_blank" rel="noopener">Countdown-Timer</a></h3>
-            <p>Simple countdown timer with start/stop functionality — useful for productivity or event countdowns.</p>
-            <p class="meta">HTML • <a href="https://github.com/manivarma701-jpg/Countdown-Timer" target="_blank">GitHub</a></p>
-          </article>
-
-          <article class="card">
-            <h3><a href="https://github.com/manivarma701-jpg/Digital-Clock" target="_blank" rel="noopener">Digital-Clock</a></h3>
-            <p>Digital clock display built with minimal HTML/CSS/JS showcasing time formatting and simple UI updates.</p>
-            <p class="meta">HTML • <a href="https://github.com/manivarma701-jpg/Digital-Clock" target="_blank">GitHub</a></p>
-          </article>
-
-          <article class="card">
-            <h3><a href="https://github.com/manivarma701-jpg/Password-Generator" target="_blank" rel="noopener">Password-Generator</a></h3>
-            <p>Secure password generator that creates customizable passwords with uppercase, lowercase, numbers, and symbols.</p>
-            <p class="meta">JavaScript • <a href="https://github.com/manivarma701-jpg/Password-Generator" target="_blank">GitHub</a></p>
-          </article>
-
-          <article class="card">
-            <h3><a href="https://github.com/manivarma701-jpg/Quote-Generator" target="_blank" rel="noopener">Quote-Generator</a></h3>
-            <p>Small app that shows random quotes and demonstrates working with arrays and DOM updates.</p>
-            <p class="meta">JavaScript • <a href="https://github.com/manivarma701-jpg/Quote-Generator" target="_blank">GitHub</a></p>
-          </article>
-
-          <article class="card">
-            <h3><a href="https://github.com/manivarma701-jpg/To-Do-List" target="_blank" rel="noopener">To-Do-List</a></h3>
-            <p>A simple to-do application showing dynamic list management and local state in the browser.</p>
-            <p class="meta">JavaScript • <a href="https://github.com/manivarma701-jpg/To-Do-List" target="_blank">GitHub</a></p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <ul class="skill-list">
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript (ES6+)</li>
-          <li>Responsive Design</li>
-          <li>Git & GitHub</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="experience" class="experience">
-      <div class="container">
-        <h2>Experience</h2>
-
-        <article class="card">
-          <h3>PYTHON FULL STACK DEVELOPER VIRTUAL INTERNSHIP</h3>
-          <p><strong>Eduskills Foundation (AICTE)</strong> | Mar 2025 – Jun 2025</p>
-          <ul>
-            <li>Built and deployed a full-stack task management web application using Python, Django, HTML, CSS, JavaScript, Bootstrap, and MySQL.</li>
-            <li>Developed frontend-backend integration via RESTful APIs and strengthened debugging and deployment skills.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>DATA SCIENCE MASTER VIRTUAL INTERNSHIP</h3>
-          <p><strong>Eduskills Foundation (AICTE)</strong> | Mar 2025 – Jun 2025</p>
-          <ul>
-            <li>Performed data analysis, visualization, and predictive modeling using Python, Pandas, Matplotlib, Seaborn, and Scikit-learn.</li>
-            <li>Executed a sales trend prediction project using regression and classification techniques.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>GOOGLE ANDROID DEVELOPER VIRTUAL INTERNSHIP</h3>
-          <p><strong>Google via Eduskills Foundation</strong> | Jul 2024 – Dec 2024</p>
-          <ul>
-            <li>Developed and deployed a functional Android app using Java, Kotlin, Android Studio, and Firebase.</li>
-            <li>Gained experience in UI/UX design, activity management, and API integration.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>GOOGLE AI/ML VIRTUAL INTERNSHIP</h3>
-          <p><strong>Google via Eduskills Foundation</strong> | Jul 2024 – Dec 2024</p>
-          <ul>
-            <li>Built predictive ML models and performed data analysis projects using Python, Pandas, NumPy, and Scikit-learn.</li>
-            <li>Developed skills in data preprocessing, feature engineering, and model evaluation.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>PALO ALTO CYBERSECURITY VIRTUAL INTERNSHIP</h3>
-          <p><strong>Palo Alto Networks via Eduskills Foundation</strong> | Apr 2024 – Jun 2024</p>
-          <ul>
-            <li>Gained practical skills in network security, threat detection, firewall management, and incident response.</li>
-            <li>Acquired proficiency in safeguarding digital assets and understanding cybersecurity principles.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>SOFTWARE DEVELOPER INTERN</h3>
-          <p><strong>Altair</strong> | Dec 2024 – Mar 2025</p>
-          <ul>
-            <li>Contributed to software development initiatives, applying coding skills to project requirements within an agile team.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>ETHICAL HACKING VIRTUAL INTERNSHIP</h3>
-          <p><strong>Eduskills Foundation (English)</strong> | Jan 2026 – Mar 2026</p>
-          <ul>
-            <li>Learned core concepts of ethical hacking, including footprinting, scanning, vulnerability assessment, and penetration testing techniques.</li>
-            <li>Gained hands-on exposure to security tools and practices for identifying and addressing system vulnerabilities.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>PROMPT ENGINEERING FOR AI VIRTUAL INTERNSHIP</h3>
-          <p><strong>Eduskills Foundation</strong> | Apr 2026 – Jun 2026</p>
-          <ul>
-            <li>Learned techniques for designing, refining, and optimizing prompts to improve outputs from AI and large language models.</li>
-            <li>Applied prompt engineering strategies to real-world use cases involving text generation, summarization, and automation.</li>
-          </ul>
-        </article>
-
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p class="contact-intro">Get in touch with me through any of these channels:</p>
-
-        <!-- Contact Details -->
-        <div class="contact-details">
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
+          <!-- Contact Quick Info -->
+          <div class="hero-quick-meta animate-fade-in">
+            <div class="quick-meta-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Eluru, Andhra Pradesh</span>
             </div>
-            <div class="contact-info">
-              <span class="label">Email</span>
-              <a href="mailto:manivarma701@gmail.com" class="value">manivarma701@gmail.com</a>
+            <div class="quick-meta-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:manivarma701@gmail.com">manivarma701@gmail.com</a>
+            </div>
+            <div class="quick-meta-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919392147272">+91 9392147272</a>
             </div>
           </div>
 
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-info">
-              <span class="label">Phone</span>
-              <a href="tel:+919332147272" class="value">+91 9332 147 272</a>
-            </div>
+          <!-- Action Buttons -->
+          <div class="hero-buttons animate-fade-in">
+            <a href="#projects" class="btn btn-primary" id="hero-view-projects-btn">
+              <span>Explore Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="resume.html" target="_blank" class="btn btn-glass" id="hero-view-resume-btn">
+              <i class="fa-solid fa-file-invoice"></i>
+              <span>View Resume</span>
+            </a>
+            <a href="resume.html" target="_blank" onclick="window.open('resume.html', '_blank'); setTimeout(()=>{}, 500);" class="btn btn-glass" id="hero-download-resume-btn">
+              <i class="fa-solid fa-download"></i>
+              <span>Download CV (PDF)</span>
+            </a>
           </div>
 
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fab fa-linkedin"></i>
-            </div>
-            <div class="contact-info">
-              <span class="label">LinkedIn</span>
-              <a href="https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank" rel="noopener" class="value">Connect with me</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Social Media Icons -->
-        <div class="social-section">
-          <h3 class="social-heading">Follow me on social media:</h3>
-          <div class="social-links" role="navigation" aria-label="Social links">
-            <a href="https://github.com/manivarma701-jpg" target="_blank" rel="noopener" class="social-icon" title="GitHub" aria-label="GitHub">
-              <i class="fab fa-github" aria-hidden="true"></i>
+          <!-- Social Links with LeetCode & LinkedIn -->
+          <div class="hero-socials animate-fade-in">
+            <span class="socials-label">Profiles:</span>
+            <a href="https://github.com/manivarma701-jpg" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub">
+              <i class="fa-brands fa-github"></i>
             </a>
-
-            <a href="https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank" rel="noopener" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
-              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <a href="https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
             </a>
-
-            <a href="mailto:manivarma701@gmail.com" class="social-icon" title="Email" aria-label="Email">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href="https://www.leetcode.com/u/saimanivarma/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LeetCode Profile" title="LeetCode">
+              <i class="fa-solid fa-code"></i>
             </a>
-
-            <a href="tel:+919332147272" class="social-icon" title="Call" aria-label="Phone">
-              <i class="fas fa-phone" aria-hidden="true"></i>
+            <a href="mailto:manivarma701@gmail.com" class="social-icon-btn" aria-label="Email Address" title="Email Me">
+              <i class="fa-solid fa-envelope"></i>
             </a>
-
-            <a href="./My%20Resume.pdf" target="_blank" rel="noopener" class="btn" title="Download Resume" download="Jujjuvarapu_Sai_Mani_Varma_Resume.pdf">
-              Download Resume
+            <a href="tel:+919392147272" class="social-icon-btn" aria-label="Call Me" title="Call Me">
+              <i class="fa-solid fa-phone"></i>
             </a>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form-container">
-          <h3 class="form-heading">Send me a message:</h3>
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label for="name">Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Your name">
+        <!-- Profile Avatar with Floating Tech Badges -->
+        <div class="hero-visual animate-fade-in">
+          <div class="avatar-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-card">
+              <img src="profile.jpg" alt="Jujjuvarapu Sai Mani Varma" class="profile-img" />
+              <div class="avatar-badge">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>B.Tech CSE '26</span>
+              </div>
             </div>
-
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required placeholder="Your email">
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-python" title="Python">
+              <i class="fa-brands fa-python"></i>
             </div>
-
-            <div class="form-group">
-              <label for="subject">Subject *</label>
-              <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+            <div class="floating-badge badge-js" title="JavaScript">
+              <i class="fa-brands fa-js"></i>
             </div>
-
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+            <div class="floating-badge badge-java" title="Java">
+              <i class="fa-brands fa-java"></i>
             </div>
-
-            <button type="submit" class="btn btn-submit">Send Message</button>
-          </form>
-          <p class="form-note">I'll get back to you as soon as possible!</p>
+            <div class="floating-badge badge-android" title="Android">
+              <i class="fa-brands fa-android"></i>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Background</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">A snapshot of my career objective, engineering background, and core focus areas.</p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Narrative Terminal Box -->
+          <div class="about-story-card glass-panel">
+            <div class="panel-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="panel-title">profile.py</span>
+            </div>
+            <div class="panel-body">
+              <p class="story-lead">
+                Hello! I am <strong class="text-white">Jujjuvarapu Sai Mani Varma</strong>, a Computer Science Engineering student at <strong class="text-white">Eluru College of Engineering and Technology</strong> (2022–2026).
+              </p>
+              <p>
+                I have gained extensive practical experience through internships with <strong class="text-white">Altair</strong>, <strong class="text-white">Google</strong>, <strong class="text-white">Palo Alto Networks</strong>, and <strong class="text-white">Eduskills Foundation (AICTE)</strong>. My hands-on work spans across <strong class="text-white">Python Full Stack (Django)</strong>, <strong class="text-white">Android Application Development</strong>, <strong class="text-white">Data Science & AI/ML</strong>, and <strong class="text-white">Cybersecurity & Ethical Hacking</strong>.
+              </p>
+              <p>
+                I love tackling real-world problems through clean code, structured algorithms, and continuous technical growth.
+              </p>
+
+              <!-- Personal Highlights Grid -->
+              <div class="personal-details-grid">
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-user"></i> Full Name</span>
+                  <span class="detail-val">Jujjuvarapu Sai Mani Varma</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-user-group"></i> Father's Name</span>
+                  <span class="detail-val">Siva Sankar</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-calendar-day"></i> Date of Birth</span>
+                  <span class="detail-val">24 September 2004</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-language"></i> Languages</span>
+                  <span class="detail-val">Telugu, English</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-location-dot"></i> Address</span>
+                  <span class="detail-val">22D-9-5, Road No. 6, Near Vinayaka Temple, Eluru, AP – 534002</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-earth-asia"></i> Nationality</span>
+                  <span class="detail-val">Indian (Single)</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Domain Pillars Grid -->
+          <div class="about-cards-grid">
+            
+            <div class="feature-card glass-panel">
+              <div class="feature-icon-box cyan">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <h3>Python Full Stack</h3>
+              <p>Developing robust web applications with Django, RESTful APIs, MySQL databases, and modern frontend interfaces.</p>
+            </div>
+
+            <div class="feature-card glass-panel">
+              <div class="feature-icon-box purple">
+                <i class="fa-brands fa-android"></i>
+              </div>
+              <h3>Android Development</h3>
+              <p>Building native Android mobile apps using Kotlin, Java, Android Studio, and Firebase backend integration.</p>
+            </div>
+
+            <div class="feature-card glass-panel">
+              <div class="feature-icon-box blue">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3>AI/ML & Data Science</h3>
+              <p>Performing data preprocessing, predictive modeling, and analytics with Pandas, NumPy, Scikit-learn, and Matplotlib.</p>
+            </div>
+
+            <div class="feature-card glass-panel">
+              <div class="feature-icon-box orange">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3>Cybersecurity & AI</h3>
+              <p>Skilled in network security fundamentals, threat detection, ethical hacking scanning, and LLM prompt engineering.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Quick Key Stats Strip -->
+        <div class="stats-strip glass-panel">
+          <div class="stat-box">
+            <span class="stat-number">8+</span>
+            <span class="stat-label"><i class="fa-solid fa-certificate"></i> Internships & Certs</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-number">6+</span>
+            <span class="stat-label"><i class="fa-solid fa-folder-open"></i> Projects Built</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-number">97%</span>
+            <span class="stat-label"><i class="fa-solid fa-award"></i> S.S.C Academic Record</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-number">Active</span>
+            <span class="stat-label"><i class="fa-solid fa-code"></i> LeetCode & GitHub</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experience & Internships Section -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Work History & Internships</span>
+          <h2 class="section-title">Internships & <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">8+ practical software engineering, AI/ML, Android, cybersecurity, and data science internships.</p>
+        </div>
+
+        <!-- Experience Category Filters -->
+        <div class="experience-filter-bar">
+          <button class="exp-filter-btn active" data-exp-filter="all">
+            <i class="fa-solid fa-layer-group"></i> All Internships (8)
+          </button>
+          <button class="exp-filter-btn" data-exp-filter="software">
+            <i class="fa-solid fa-laptop-code"></i> Software & Web
+          </button>
+          <button class="exp-filter-btn" data-exp-filter="google">
+            <i class="fa-brands fa-google"></i> Google Programs
+          </button>
+          <button class="exp-filter-btn" data-exp-filter="aiml">
+            <i class="fa-solid fa-brain"></i> AI/ML & Data Science
+          </button>
+          <button class="exp-filter-btn" data-exp-filter="security">
+            <i class="fa-solid fa-shield-halved"></i> Cybersecurity
+          </button>
+        </div>
+
+        <div class="experience-timeline" id="experience-timeline">
+
+          <!-- 1. Altair Software Developer Intern -->
+          <div class="exp-card glass-panel" data-exp-category="software">
+            <div class="exp-header">
+              <div class="exp-org-icon cyan">
+                <i class="fa-solid fa-code-branch"></i>
+              </div>
+              <div class="exp-title-block">
+                <div class="exp-meta-badge">Corporate Internship</div>
+                <h3>Software Developer Intern</h3>
+                <span class="exp-company">Altair</span>
+              </div>
+              <div class="exp-time-badge">
+                <i class="fa-regular fa-calendar"></i> Dec 2024 – Mar 2025
+              </div>
+            </div>
+            <p class="exp-desc">
+              Contributed to active software development initiatives, applying robust coding practices to engineering requirements within an agile scrum team.
+            </p>
+            <ul class="exp-highlights">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Agile team sprint collaboration and code reviews.</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Feature implementation, testing, and debugging.</li>
+            </ul>
+            <div class="exp-tags">
+              <span><i class="fa-solid fa-users"></i> Agile Development</span>
+              <span><i class="fa-solid fa-code"></i> Software Engineering</span>
+              <span><i class="fa-solid fa-bug"></i> Debugging</span>
+            </div>
+          </div>
+
+          <!-- 2. Python Full Stack Developer Virtual Internship -->
+          <div class="exp-card glass-panel" data-exp-category="software">
+            <div class="exp-header">
+              <div class="exp-org-icon purple">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="exp-title-block">
+                <div class="exp-meta-badge aicte">AICTE Recognized</div>
+                <h3>Python Full Stack Developer Virtual Internship</h3>
+                <span class="exp-company">Eduskills Foundation (AICTE)</span>
+              </div>
+              <div class="exp-time-badge">
+                <i class="fa-regular fa-calendar"></i> Mar 2025 – Jun 2025
+              </div>
+            </div>
+            <p class="exp-desc">
+              Built and deployed a full-stack task management web application using Python, Django, HTML, CSS, JavaScript, Bootstrap, and MySQL. Developed frontend-backend integration via RESTful APIs and strengthened debugging and deployment skills.
+            </p>
+            <ul class="exp-highlights">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Developed end-to-end Task Management web application.</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Designed relational database schemas and REST API endpoints.</li>
+            </ul>
+            <div class="exp-tags">
+              <span><i class="fa-brands fa-python"></i> Python</span>
+              <span><i class="fa-solid fa-server"></i> Django</span>
+              <span><i class="fa-solid fa-network-wired"></i> RESTful APIs</span>
+              <span><i class="fa-solid fa-database"></i> MySQL</span>
+              <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- 3. Google Android Developer Virtual Internship -->
+          <div class="exp-card glass-panel" data-exp-category="google software">
+            <div class="exp-header">
+              <div class="exp-org-icon green">
+                <i class="fa-brands fa-android"></i>
+              </div>
+              <div class="exp-title-block">
+                <div class="exp-meta-badge google">Google Program</div>
+                <h3>Google Android Developer Virtual Internship</h3>
+                <span class="exp-company">Google via Eduskills Foundation</span>
+              </div>
+              <div class="exp-time-badge">
+                <i class="fa-regular fa-calendar"></i> Jul 2024 – Dec 2024
+              </div>
+            </div>
+            <p class="exp-desc">
+              Developed and deployed a functional Android mobile application using Java, Kotlin, Android Studio, and Firebase backend integration. Gained hands-on experience in mobile UI/UX design, activity lifecycle management, and API handling.
+            </p>
+            <ul class="exp-highlights">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Built native Android mobile app with Kotlin & Java.</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Integrated Firebase realtime database and user authentication.</li>
+            </ul>
+            <div class="exp-tags">
+              <span><i class="fa-brands fa-android"></i> Android Studio</span>
+              <span><i class="fa-solid fa-mobile-screen"></i> Kotlin & Java</span>
+              <span><i class="fa-solid fa-fire"></i> Firebase</span>
+              <span><i class="fa-solid fa-palette"></i> Mobile UI/UX</span>
+            </div>
+          </div>
+
+          <!-- 4. Google AI/ML Virtual Internship -->
+          <div class="exp-card glass-panel" data-exp-category="google aiml">
+            <div class="exp-header">
+              <div class="exp-org-icon blue">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div class="exp-title-block">
+                <div class="exp-meta-badge google">Google Program</div>
+                <h3>Google AI/ML Virtual Internship</h3>
+                <span class="exp-company">Google via Eduskills Foundation</span>
+              </div>
+              <div class="exp-time-badge">
+                <i class="fa-regular fa-calendar"></i> Jul 2024 – Dec 2024
+              </div>
+            </div>
+            <p class="exp-desc">
+              Built predictive ML models and performed exploratory data analysis projects using Python, Pandas, NumPy, and Scikit-learn. Developed expertise in data preprocessing, feature engineering, and model evaluation metrics.
+            </p>
+            <ul class="exp-highlights">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Trained supervised and unsupervised machine learning algorithms.</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Applied feature extraction, hyperparameter tuning, and cross-validation.</li>
+            </ul>
+            <div class="exp-tags">
+              <span><i class="fa-brands fa-python"></i> Python</span>
+              <span><i class="fa-solid fa-brain"></i> Scikit-learn</span>
+              <span><i class="fa-solid fa-table"></i> Pandas & NumPy</span>
+              <span><i class="fa-solid fa-chart-line"></i> Feature Engineering</span>
+            </div>
+          </div>
+
+          <!-- 5. Data Science Master Virtual Internship -->
+          <div class="exp-card glass-panel" data-exp-category="aiml">
+            <div class="exp-header">
+              <div class="exp-org-icon orange">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <div class="exp-title-block">
+                <div class="exp-meta-badge aicte">AICTE Recognized</div>
+                <h3>Data Science Master Virtual Internship</h3>
+                <span class="exp-company">Eduskills Foundation (AICTE)</span>
+              </div>
+              <div class="exp-time-badge">
+                <i class="fa-regular fa-calendar"></i> Mar 2025 – Jun 2025
+              </div>
+            </div>
+            <p class="exp-desc">
+              Performed data analysis, visualization, and predictive modeling using Python, Pandas, Matplotlib, Seaborn, and Scikit-learn. Executed a sales trend prediction project using regression and classification techniques.
+            </p>
+            <ul class="exp-highlights">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Built end-to-end Sales Trend Prediction regression models.</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Designed data visualization dashboards with Matplotlib & Seaborn.</li>
+            </ul>
+            <div class="exp-tags">
+              <span><i class="fa-solid fa-chart-line"></i> Data Analysis</span>
+              <span><i class="fa-solid fa-chart-pie"></i> Matplotlib & Seaborn</span>
+              <span><i class="fa-solid fa-calculator"></i> Regression</span>
+              <span><i class="fa-solid fa-diagram-project"></i> Classification</span>
+            </div>
+          </div>
+
+          <!-- 6. Palo Alto Cybersecurity Virtual Internship -->
+          <div class="exp-card glass-panel" data-exp-category="security">
+            <div class="exp-header">
+              <div class="exp-org-icon red">
+                <i class="fa-solid fa-shield-virus"></i>
+              </div>
+              <div class="exp-title-block">
+                <div class="exp-meta-badge security">Palo Alto Networks</div>
+                <h3>Palo Alto Cybersecurity Virtual Internship</h3>
+                <span class="exp-company">Palo Alto Networks via Eduskills</span>
+              </div>
+              <div class="exp-time-badge">
+                <i class="fa-regular fa-calendar"></i> Apr 2024 – Jun 2024
+              </div>
+            </div>
+            <p class="exp-desc">
+              Gained practical skills in network security, threat detection, firewall management, and incident response. Acquired proficiency in safeguarding digital assets and understanding modern enterprise cybersecurity principles.
+            </p>
+            <ul class="exp-highlights">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Mastered firewall configuration and network traffic monitoring.</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Incident response workflows and proactive threat mitigation.</li>
+            </ul>
+            <div class="exp-tags">
+              <span><i class="fa-solid fa-shield-halved"></i> Network Security</span>
+              <span><i class="fa-solid fa-fire"></i> Firewall Management</span>
+              <span><i class="fa-solid fa-triangle-exclamation"></i> Threat Detection</span>
+              <span><i class="fa-solid fa-lock"></i> Digital Asset Safety</span>
+            </div>
+          </div>
+
+          <!-- 7. Ethical Hacking Virtual Internship -->
+          <div class="exp-card glass-panel" data-exp-category="security">
+            <div class="exp-header">
+              <div class="exp-org-icon cyan">
+                <i class="fa-solid fa-user-secret"></i>
+              </div>
+              <div class="exp-title-block">
+                <div class="exp-meta-badge security">Security Specialized</div>
+                <h3>Ethical Hacking Virtual Internship</h3>
+                <span class="exp-company">Eduskills Foundation</span>
+              </div>
+              <div class="exp-time-badge">
+                <i class="fa-regular fa-calendar"></i> Jan 2026 – Mar 2026
+              </div>
+            </div>
+            <p class="exp-desc">
+              Learned core concepts of ethical hacking, including footprinting, network scanning, vulnerability assessment, and penetration testing techniques. Gained hands-on exposure to security tools and practices for identifying system vulnerabilities.
+            </p>
+            <ul class="exp-highlights">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Performed vulnerability assessment and system footprinting.</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Practiced penetration testing techniques and mitigation strategies.</li>
+            </ul>
+            <div class="exp-tags">
+              <span><i class="fa-solid fa-magnifying-glass"></i> Vulnerability Assessment</span>
+              <span><i class="fa-solid fa-bug-slash"></i> Penetration Testing</span>
+              <span><i class="fa-solid fa-network-wired"></i> Port Scanning</span>
+            </div>
+          </div>
+
+          <!-- 8. Prompt Engineering for AI Virtual Internship -->
+          <div class="exp-card glass-panel" data-exp-category="aiml">
+            <div class="exp-header">
+              <div class="exp-org-icon purple">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <div class="exp-title-block">
+                <div class="exp-meta-badge aicte">GenAI Specialized</div>
+                <h3>Prompt Engineering for AI Virtual Internship</h3>
+                <span class="exp-company">Eduskills Foundation</span>
+              </div>
+              <div class="exp-time-badge">
+                <i class="fa-regular fa-calendar"></i> Apr 2026 – Jun 2026
+              </div>
+            </div>
+            <p class="exp-desc">
+              Learned techniques for designing, refining, and optimizing prompts to improve outputs from AI and large language models. Applied prompt engineering strategies to real-world use cases involving text generation, summarization, and workflow automation.
+            </p>
+            <ul class="exp-highlights">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Mastered few-shot, zero-shot, and chain-of-thought prompt design.</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Built automated workflows with LLM integration for business tasks.</li>
+            </ul>
+            <div class="exp-tags">
+              <span><i class="fa-solid fa-robot"></i> LLM Optimization</span>
+              <span><i class="fa-solid fa-wand-sparkles"></i> Prompt Design</span>
+              <span><i class="fa-solid fa-gears"></i> AI Automation</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Competencies</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">Proficiencies in programming languages, web stacks, mobile platforms, and AI tools.</p>
+        </div>
+
+        <div class="skills-categories-grid">
+
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="category-icon-wrapper cyan">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div>
+                <h3>Programming Languages</h3>
+                <p>Core programming & algorithmic problem solving</p>
+              </div>
+            </div>
+
+            <div class="skill-chips-grid">
+              
+              <div class="skill-chip">
+                <i class="fa-brands fa-python skill-icon python-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">Python</span>
+                  <span class="chip-desc">Full Stack, AI/ML & Data Science</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-brands fa-java skill-icon java-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">Java</span>
+                  <span class="chip-desc">OOP & Android Applications</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-solid fa-c skill-icon c-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">C / C++</span>
+                  <span class="chip-desc">Data Structures & Core Systems</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-brands fa-js skill-icon js-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">JavaScript (ES6+)</span>
+                  <span class="chip-desc">DOM Manipulation & Async Logic</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 2: Web & Backend Development -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="category-icon-wrapper purple">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div>
+                <h3>Web & Backend Development</h3>
+                <p>Full-stack architectures, databases & APIs</p>
+              </div>
+            </div>
+
+            <div class="skill-chips-grid">
+              
+              <div class="skill-chip">
+                <i class="fa-solid fa-server skill-icon django-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">Django & Python Backend</span>
+                  <span class="chip-desc">MVC Framework & ORM</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-solid fa-database skill-icon mysql-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">MySQL & SQL</span>
+                  <span class="chip-desc">Relational Database Design</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-solid fa-network-wired skill-icon api-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">RESTful APIs</span>
+                  <span class="chip-desc">Frontend-Backend Integration</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-brands fa-html5 skill-icon html-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">HTML5 & CSS3</span>
+                  <span class="chip-desc">Semantic & Responsive Styling</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-brands fa-bootstrap skill-icon bootstrap-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">Bootstrap</span>
+                  <span class="chip-desc">Rapid UI Layouts & Components</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 3: Mobile, AI/ML & Developer Tools -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="category-icon-wrapper blue">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div>
+                <h3>Mobile, AI/ML & Tools</h3>
+                <p>Android, Data Science & Developer tooling</p>
+              </div>
+            </div>
+
+            <div class="skill-chips-grid">
+              
+              <div class="skill-chip">
+                <i class="fa-brands fa-android skill-icon android-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">Android Studio & Kotlin</span>
+                  <span class="chip-desc">Mobile App Development</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-solid fa-fire skill-icon firebase-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">Firebase</span>
+                  <span class="chip-desc">Cloud DB & Authentication</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-solid fa-brain skill-icon ai-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">Pandas, NumPy, Scikit-learn</span>
+                  <span class="chip-desc">Data Science & ML Models</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-solid fa-chart-line skill-icon viz-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">Matplotlib & Seaborn</span>
+                  <span class="chip-desc">Data Visualization</span>
+                </div>
+              </div>
+
+              <div class="skill-chip">
+                <i class="fa-brands fa-git-alt skill-icon git-color"></i>
+                <div class="chip-info">
+                  <span class="chip-title">Git & GitHub</span>
+                  <span class="chip-desc">Version Control & Open Source</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-laptop-code"></i> Portfolio</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Full-stack applications, data science models, and interactive web tools.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fa-solid fa-border-all"></i> All Projects
+          </button>
+          <button class="filter-btn" data-filter="fullstack">
+            <i class="fa-solid fa-server"></i> Full-Stack & ML
+          </button>
+          <button class="filter-btn" data-filter="tools">
+            <i class="fa-solid fa-screwdriver-wrench"></i> Utilities & Generators
+          </button>
+          <button class="filter-btn" data-filter="ui">
+            <i class="fa-solid fa-display"></i> UI & Time Displays
+          </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+
+          <!-- Project 0: Full Stack Task Management Web App -->
+          <article class="project-card glass-panel" data-category="fullstack">
+            <div class="project-banner banner-django">
+              <div class="banner-icon"><i class="fa-brands fa-python"></i></div>
+              <div class="project-type-badge">Full Stack Python</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-top">
+                <h3 class="project-title">Python Full Stack Task Manager</h3>
+                <span class="project-github-icon"><i class="fa-solid fa-shield-halved"></i></span>
+              </div>
+              <p class="project-description">
+                Built and deployed a full-stack task management web app using Python, Django, RESTful APIs, Bootstrap, and MySQL. Features user authentication, task workflows, and database integration.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="tech-tag"><i class="fa-solid fa-server"></i> Django</span>
+                <span class="tech-tag"><i class="fa-solid fa-database"></i> MySQL</span>
+                <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+              </div>
+              <div class="project-actions">
+                <a href="#experience" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-briefcase"></i> AICTE Internship Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 0.5: Sales Trend Prediction Model -->
+          <article class="project-card glass-panel" data-category="fullstack">
+            <div class="project-banner banner-ml">
+              <div class="banner-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="project-type-badge">AI / ML Data Science</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-top">
+                <h3 class="project-title">Sales Trend Prediction Model</h3>
+                <span class="project-github-icon"><i class="fa-solid fa-brain"></i></span>
+              </div>
+              <p class="project-description">
+                Data science and machine learning project performing predictive modeling using Python, Pandas, Matplotlib, Seaborn, and Scikit-learn with regression and classification algorithms.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="tech-tag"><i class="fa-solid fa-brain"></i> Scikit-learn</span>
+                <span class="tech-tag"><i class="fa-solid fa-chart-pie"></i> Matplotlib</span>
+                <span class="tech-tag"><i class="fa-solid fa-table"></i> Pandas</span>
+              </div>
+              <div class="project-actions">
+                <a href="#experience" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-briefcase"></i> Data Science Internship
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 1: Colour Palette Picker -->
+          <article class="project-card glass-panel" data-category="tools">
+            <div class="project-banner banner-palette">
+              <div class="banner-icon"><i class="fa-solid fa-palette"></i></div>
+              <div class="project-type-badge">Color Utility</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-top">
+                <h3 class="project-title">Colour-Palette-Picker</h3>
+                <a href="https://github.com/manivarma701-jpg/Colour-Palette-Picker" target="_blank" rel="noopener noreferrer" class="project-github-icon" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <p class="project-description">
+                Interactive color palette generator and picker built with vanilla JavaScript. Generate harmonious palettes, inspect HEX/RGB values, and copy color codes with one click.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="tech-tag"><i class="fa-solid fa-eye-dropper"></i> Color API</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/manivarma701-jpg/Colour-Palette-Picker" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fa-brands fa-github"></i> GitHub Code
+                </a>
+                <a href="https://manivarma701-jpg.github.io/Colour-Palette-Picker/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Password Generator -->
+          <article class="project-card glass-panel" data-category="tools">
+            <div class="project-banner banner-password">
+              <div class="banner-icon"><i class="fa-solid fa-key"></i></div>
+              <div class="project-type-badge">Security Tool</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-top">
+                <h3 class="project-title">Password-Generator</h3>
+                <a href="https://github.com/manivarma701-jpg/Password-Generator" target="_blank" rel="noopener noreferrer" class="project-github-icon" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <p class="project-description">
+                Customizable security tool generating strong, random passwords based on user-defined length and preferences (uppercase, lowercase, numbers, and special symbols).
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="tech-tag"><i class="fa-solid fa-shield-halved"></i> Randomization</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/manivarma701-jpg/Password-Generator" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fa-brands fa-github"></i> GitHub Code
+                </a>
+                <a href="https://manivarma701-jpg.github.io/Password-Generator/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Interactive To-Do List -->
+          <article class="project-card glass-panel" data-category="tools">
+            <div class="project-banner banner-todo">
+              <div class="banner-icon"><i class="fa-solid fa-list-check"></i></div>
+              <div class="project-type-badge">Task Manager</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-top">
+                <h3 class="project-title">Interactive To-Do List</h3>
+                <a href="https://github.com/manivarma701-jpg/To-Do-List" target="_blank" rel="noopener noreferrer" class="project-github-icon" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <p class="project-description">
+                Task manager application built with JavaScript for task organization, complete/delete toggles, and state persistence with client-side LocalStorage.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="tech-tag"><i class="fa-solid fa-database"></i> LocalStorage</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> Flexbox</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/manivarma701-jpg/To-Do-List" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fa-brands fa-github"></i> GitHub Code
+                </a>
+                <a href="https://manivarma701-jpg.github.io/To-Do-List/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Countdown Timer -->
+          <article class="project-card glass-panel" data-category="ui">
+            <div class="project-banner banner-timer">
+              <div class="banner-icon"><i class="fa-solid fa-stopwatch-20"></i></div>
+              <div class="project-type-badge">Timing Tool</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-top">
+                <h3 class="project-title">Countdown-Timer</h3>
+                <a href="https://github.com/manivarma701-jpg/Countdown-Timer" target="_blank" rel="noopener noreferrer" class="project-github-icon" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <p class="project-description">
+                Web-based countdown timer built using HTML, CSS, and JavaScript to count down accurately to a user-specified date and time with pause and reset controls.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> Timing Interval</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/manivarma701-jpg/Countdown-Timer" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fa-brands fa-github"></i> GitHub Code
+                </a>
+                <a href="https://manivarma701-jpg.github.io/Countdown-Timer/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Quote Generator -->
+          <article class="project-card glass-panel" data-category="tools">
+            <div class="project-banner banner-quote">
+              <div class="banner-icon"><i class="fa-solid fa-quote-left"></i></div>
+              <div class="project-type-badge">Inspirational App</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-top">
+                <h3 class="project-title">Quote-Generator</h3>
+                <a href="https://github.com/manivarma701-jpg/Quote-Generator" target="_blank" rel="noopener noreferrer" class="project-github-icon" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <p class="project-description">
+                Interactive web app that fetches and dynamically displays random inspirational quotes with author attribution and smooth visual transitions.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="tech-tag"><i class="fa-solid fa-network-wired"></i> Fetch API</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/manivarma701-jpg/Quote-Generator" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fa-brands fa-github"></i> GitHub Code
+                </a>
+                <a href="https://manivarma701-jpg.github.io/Quote-Generator/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Digital Clock -->
+          <article class="project-card glass-panel" data-category="ui">
+            <div class="project-banner banner-clock">
+              <div class="banner-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="project-type-badge">Real-Time UI</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-top">
+                <h3 class="project-title">Digital-Clock</h3>
+                <a href="https://github.com/manivarma701-jpg/Digital-Clock" target="_blank" rel="noopener noreferrer" class="project-github-icon" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <p class="project-description">
+                Real-time digital clock displaying the current time and date formatting using HTML, CSS, and JavaScript with glowing LED styling.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> DOM Updates</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/manivarma701-jpg/Digital-Clock" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fa-brands fa-github"></i> GitHub Code
+                </a>
+                <a href="https://manivarma701-jpg.github.io/Digital-Clock/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academics</span>
+          <h2 class="section-title">Educational <span class="gradient-text">Qualifications</span></h2>
+          <p class="section-subtitle">My formal academic background and qualifications in Computer Science Engineering.</p>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- B.Tech Card -->
+          <div class="edu-card glass-panel highlight-edu">
+            <div class="edu-icon-badge">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="edu-content">
+              <div class="edu-year-tag">2022 – 2026 (Pursuing)</div>
+              <h3 class="edu-degree">B.Tech — Computer Science & Engineering</h3>
+              <h4 class="edu-institute">Eluru College of Engineering and Technology</h4>
+              <p class="edu-score"><i class="fa-solid fa-chart-simple"></i> CGPA: <strong>6.57</strong></p>
+              <p class="edu-notes">Specializing in Full Stack Software Development, Database Management Systems, Data Structures & Algorithms, and AI/ML foundations.</p>
+            </div>
+          </div>
+
+          <!-- Intermediate Card -->
+          <div class="edu-card glass-panel">
+            <div class="edu-icon-badge">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="edu-content">
+              <div class="edu-year-tag">2020 – 2022</div>
+              <h3 class="edu-degree">Intermediate (M.P.C)</h3>
+              <h4 class="edu-institute">Narayana Junior College</h4>
+              <p class="edu-score"><i class="fa-solid fa-chart-simple"></i> Percentage: <strong>57%</strong></p>
+              <p class="edu-notes">Mathematics, Physics, and Chemistry curriculum strengthening logical and analytical foundation.</p>
+            </div>
+          </div>
+
+          <!-- SSC Card -->
+          <div class="edu-card glass-panel">
+            <div class="edu-icon-badge">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="edu-content">
+              <div class="edu-year-tag">2019</div>
+              <h3 class="edu-degree">Secondary School Certificate (S.S.C)</h3>
+              <h4 class="edu-institute">Bhashyam Public School, Eluru</h4>
+              <p class="edu-score"><i class="fa-solid fa-star text-gold"></i> Score: <strong class="text-gold">97%</strong></p>
+              <p class="edu-notes">Graduated with top academic honors and strong excellence in science and mathematics.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+          <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">Feel free to connect for software engineering roles, internships, or technical collaborations.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Details Cards -->
+          <div class="contact-info-col">
+            
+            <div class="contact-card glass-panel" id="email-card">
+              <div class="contact-card-icon cyan">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-card-label">Primary Email</span>
+                <a href="mailto:manivarma701@gmail.com" class="contact-card-val">manivarma701@gmail.com</a>
+              </div>
+              <button class="copy-btn" id="copy-email-btn" title="Copy Email Address" aria-label="Copy Email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon green">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-card-label">Phone / WhatsApp</span>
+                <a href="tel:+919392147272" class="contact-card-val">+91 9392147272</a>
+              </div>
+              <button class="copy-btn" id="copy-phone-btn" title="Copy Phone Number" aria-label="Copy Phone">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon purple">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-card-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank" rel="noopener noreferrer" class="contact-card-val">linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a</a>
+              </div>
+              <a href="https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank" rel="noopener noreferrer" class="external-link-btn" aria-label="Visit LinkedIn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon blue">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-card-label">GitHub & LeetCode</span>
+                <span class="contact-card-val">github.com/manivarma701-jpg</span>
+              </div>
+              <a href="https://github.com/manivarma701-jpg" target="_blank" rel="noopener noreferrer" class="external-link-btn" aria-label="Visit GitHub">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon orange">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-card-label">Address</span>
+                <span class="contact-card-val">22D-9-5, Road No. 6, Near Vinayaka Temple, Eluru, Andhra Pradesh – 534002</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-col">
+            <form class="contact-form glass-panel" id="contact-form">
+              <div class="form-title-group">
+                <h3>Send a Direct Message</h3>
+                <p>Have an opening, interview inquiry, or project proposal? Send a message below!</p>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-name"><i class="fa-solid fa-user"></i> Your Name / Organization</label>
+                <input type="text" id="contact-name" name="name" placeholder="e.g. Hiring Manager / Recruiter" required autocomplete="name" />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email"><i class="fa-solid fa-envelope"></i> Your Email</label>
+                <input type="email" id="contact-email" name="email" placeholder="e.g. recruiter@company.com" required autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject"><i class="fa-solid fa-tag"></i> Subject</label>
+                <input type="text" id="contact-subject" name="subject" placeholder="Software Engineer Opportunity" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message"><i class="fa-solid fa-message"></i> Message</label>
+                <textarea id="contact-message" name="message" rows="4" placeholder="Hello Sai Mani Varma, We reviewed your profile and would like to discuss an opportunity..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="contact-submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 Jujjuvarapu Sai Mani Varma</p>
+  <!-- Complete Resume Modal -->
+  <div class="resume-modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="resume-modal-backdrop" id="modal-backdrop"></div>
+    <div class="resume-modal-container glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-file-invoice text-cyan"></i>
+          <h3 id="resume-modal-title">Curriculum Vitae — Jujjuvarapu Sai Mani Varma</h3>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-sm btn-glass" id="print-resume-btn">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+          <button class="modal-close-btn" id="close-resume-btn" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body printable-resume" id="printable-resume">
+        <!-- Resume Header -->
+        <div class="res-head">
+          <h2>JUJJUVARAPU SAI MANI VARMA</h2>
+          <p class="res-sub">Computer Science Engineer | Full Stack & Software Developer</p>
+          <div class="res-contact-row">
+            <span><i class="fa-solid fa-envelope"></i> manivarma701@gmail.com</span>
+            <span><i class="fa-solid fa-phone"></i> +91 9392147272</span>
+            <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a</span>
+            <span><i class="fa-brands fa-github"></i> github.com/manivarma701-jpg</span>
+            <span><i class="fa-solid fa-code"></i> leetcode.com/u/saimanivarma</span>
+            <span><i class="fa-solid fa-location-dot"></i> Eluru, Andhra Pradesh – 534002</span>
+          </div>
+        </div>
+
+        <hr class="res-divider" />
+
+        <!-- Objective -->
+        <div class="res-section">
+          <h3><i class="fa-solid fa-bullseye"></i> CAREER OBJECTIVE</h3>
+          <p>Aspiring Computer Science Engineer seeking opportunities to apply technical skills and problem-solving abilities to contribute to innovative software projects while continuously learning and growing in the IT industry.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="res-section">
+          <h3><i class="fa-solid fa-graduation-cap"></i> EDUCATIONAL QUALIFICATION</h3>
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>B.Tech in Computer Science & Engineering</strong>
+              <span class="res-year">2022 – 2026</span>
+            </div>
+            <p>Eluru College of Engineering and Technology | CGPA: <strong>6.57</strong></p>
+          </div>
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Intermediate (M.P.C)</strong>
+              <span class="res-year">2022</span>
+            </div>
+            <p>Narayana Junior College | Percentage: <strong>57%</strong></p>
+          </div>
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Secondary School Certificate (S.S.C)</strong>
+              <span class="res-year">2019</span>
+            </div>
+            <p>Bhashyam Public School, Eluru | Percentage: <strong>97%</strong></p>
+          </div>
+        </div>
+
+        <!-- Experience & Internships -->
+        <div class="res-section">
+          <h3><i class="fa-solid fa-briefcase"></i> INTERNSHIP EXPERIENCE</h3>
+          
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Software Developer Intern — Altair</strong>
+              <span class="res-year">Dec 2024 – Mar 2025</span>
+            </div>
+            <p>Contributed to software development initiatives, applying coding skills to project requirements within an agile team.</p>
+          </div>
+
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Python Full Stack Developer Virtual Internship — Eduskills Foundation (AICTE)</strong>
+              <span class="res-year">Mar 2025 – Jun 2025</span>
+            </div>
+            <p>Built and deployed a full-stack task management web application using Python, Django, HTML, CSS, JavaScript, Bootstrap, and MySQL. Developed frontend-backend integration via RESTful APIs and strengthened debugging and deployment skills.</p>
+          </div>
+
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Google Android Developer Virtual Internship — Google via Eduskills</strong>
+              <span class="res-year">Jul 2024 – Dec 2024</span>
+            </div>
+            <p>Developed and deployed a functional Android app using Java, Kotlin, Android Studio, and Firebase. Gained experience in UI/UX design, activity management, and API integration.</p>
+          </div>
+
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Google AI/ML Virtual Internship — Google via Eduskills</strong>
+              <span class="res-year">Jul 2024 – Dec 2024</span>
+            </div>
+            <p>Built predictive ML models and performed data analysis projects using Python, Pandas, NumPy, and Scikit-learn. Developed skills in data preprocessing, feature engineering, and model evaluation.</p>
+          </div>
+
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Data Science Master Virtual Internship — Eduskills Foundation (AICTE)</strong>
+              <span class="res-year">Mar 2025 – Jun 2025</span>
+            </div>
+            <p>Performed data analysis, visualization, and predictive modeling using Python, Pandas, Matplotlib, Seaborn, and Scikit-learn. Executed a sales trend prediction project using regression and classification techniques.</p>
+          </div>
+
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Palo Alto Cybersecurity Virtual Internship — Palo Alto Networks</strong>
+              <span class="res-year">Apr 2024 – Jun 2024</span>
+            </div>
+            <p>Gained practical skills in network security, threat detection, firewall management, and incident response. Acquired proficiency in safeguarding digital assets.</p>
+          </div>
+
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Ethical Hacking Virtual Internship — Eduskills Foundation</strong>
+              <span class="res-year">Jan 2026 – Mar 2026</span>
+            </div>
+            <p>Learned core concepts of ethical hacking, including footprinting, scanning, vulnerability assessment, and penetration testing techniques.</p>
+          </div>
+
+          <div class="res-item">
+            <div class="res-item-row">
+              <strong>Prompt Engineering for AI Virtual Internship — Eduskills Foundation</strong>
+              <span class="res-year">Apr 2026 – Jun 2026</span>
+            </div>
+            <p>Learned techniques for designing, refining, and optimizing prompts to improve outputs from AI and large language models for real-world automation.</p>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="res-section">
+          <h3><i class="fa-solid fa-screwdriver-wrench"></i> TECHNICAL SKILLS</h3>
+          <ul class="res-skills-list">
+            <li><strong>Programming Languages:</strong> C, C++, Java, Python, JavaScript</li>
+            <li><strong>Web Development:</strong> HTML5, CSS3, JavaScript, Django, Bootstrap, MySQL, RESTful APIs</li>
+            <li><strong>Mobile Development:</strong> Android Studio, Java, Kotlin, Firebase</li>
+            <li><strong>AI/ML & Data Science:</strong> Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Prompt Engineering</li>
+            <li><strong>Tools & Platforms:</strong> Git, GitHub, VS Code, Android Studio, RESTful APIs</li>
+          </ul>
+        </div>
+
+        <!-- Projects -->
+        <div class="res-section">
+          <h3><i class="fa-solid fa-code-fork"></i> MINI PROJECTS</h3>
+          <ul class="res-projects-list">
+            <li><strong>Countdown Timer:</strong> Built a web-based countdown timer using HTML, CSS, and JavaScript to count down to a user-specified date and time.</li>
+            <li><strong>Digital Clock:</strong> Developed a real-time digital clock displaying the current time using HTML, CSS, and JavaScript.</li>
+            <li><strong>Password Generator:</strong> Created a tool that generates secure, random passwords based on user-defined length and character preferences.</li>
+            <li><strong>Quote Generator:</strong> Built an application that fetches and displays random inspirational quotes using JavaScript.</li>
+          </ul>
+        </div>
+
+        <!-- Personal Details & Declaration -->
+        <div class="res-section">
+          <h3><i class="fa-solid fa-id-card"></i> PERSONAL DETAILS & DECLARATION</h3>
+          <div class="res-personal-grid">
+            <div><strong>Father's Name:</strong> Siva Sankar</div>
+            <div><strong>Date of Birth:</strong> 24 September 2004</div>
+            <div><strong>Gender & Status:</strong> Male, Single</div>
+            <div><strong>Languages:</strong> Telugu, English</div>
+            <div class="full-span"><strong>Address:</strong> S/O Siva Sankar, 22D-9-5, Road No. 6, Near Vinayaka Temple, Eluru, Andhra Pradesh – 534002</div>
+          </div>
+          <p class="res-declaration">
+            <em>"I declare that the particulars given above are true and best of my knowledge and belief."</em>
+          </p>
+          <div class="res-signature">
+            <strong>Jujjuvarapu Sai Mani Varma</strong>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-bracket">&lt;</span><span>Sai Mani Varma</span><span class="logo-bracket"> /&gt;</span>
+        </a>
+        <p>Computer Science Engineer & Aspiring Full Stack Developer from Eluru, Andhra Pradesh. Focused on building clean, impactful software.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+          <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About</a></li>
+          <li><a href="#experience"><i class="fa-solid fa-angle-right"></i> Experience</a></li>
+          <li><a href="#skills"><i class="fa-solid fa-angle-right"></i> Skills</a></li>
+          <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> Projects</a></li>
+          <li><a href="#education"><i class="fa-solid fa-angle-right"></i> Education</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-socials">
+        <h4>Connect With Me</h4>
+        <div class="social-links-row">
+          <a href="https://github.com/manivarma701-jpg" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jujjuvarapu-sai-mani-varma-2842a026a" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.leetcode.com/u/saimanivarma/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LeetCode Profile">
+            <i class="fa-solid fa-code"></i>
+          </a>
+          <a href="mailto:manivarma701@gmail.com" class="social-icon-btn" aria-label="Send Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="tel:+919392147272" class="social-icon-btn" aria-label="Call Me">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> Jujjuvarapu Sai Mani Varma. All rights reserved.
+        </p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const href = a.getAttribute('href');
-        if(href.length>1){
-          e.preventDefault();
-          document.querySelector(href).scrollIntoView({behavior:'smooth'});
-        }
-      });
-    });
+  <!-- Floating Back to Top Button -->
+  <a href="#home" class="back-to-top-btn" id="back-to-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
 
-    // Contact form handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
-      
-      // Create mailto link
-      const mailtoLink = `mailto:manivarma701@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
-      
-      // Open email client
-      window.location.href = mailtoLink;
-      
-      // Reset form
-      this.reset();
-      alert('Opening your email client... If it doesn\'t open, please email me directly at manivarma701@gmail.com');
-    });
-  </script>
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <i class="fa-solid fa-circle-check toast-icon" id="toast-icon"></i>
+    <span class="toast-message" id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
